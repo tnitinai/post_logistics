@@ -1,7 +1,11 @@
 <?php
 
+use App\Livewire\Package\CreateForm;
+use App\Livewire\Invoice\ShowReceipt;
+use App\Livewire\Bag\ShowBag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +28,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::put('/profile', 'ProfileController@update')->name('profile.update');
+Route::get('/package', [CreateForm::class, '__invoke'])->name('package');
+Route::get('/receipt/{invoice_id}', [ShowReceipt::class, '__invoke'])->name('show-receipt');
+Route::get('/bag', [ShowBag::class, '__invoke'])->name('show-bag');
 
 Route::get('/about', function () {
     return view('about');

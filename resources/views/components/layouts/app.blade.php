@@ -19,6 +19,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
+    @livewireStyles
+
     <!-- Favicon -->
     <link href="{{ asset('img/favicon.png') }}" rel="icon" type="image/png">
 </head>
@@ -55,11 +57,19 @@
             {{ __('Settings') }}
         </div> --}}
 
-        <!-- Nav Item - Profile -->
+        <!-- Nav Item - Package Registration -->
         <li class="nav-item {{ Nav::isRoute('package') }}">
-            <a class="nav-link" href="{{ route('package') }}">
+            <a class="nav-link" href={{ route('package') }} wire:navigate>
                 <i class="fas fa-box"></i>
                 <span>{{ __('รับพัสดุ') }}</span>
+            </a>
+        </li>
+
+        <!-- Nav Item - Bag Management -->
+        <li class="nav-item {{ Nav::isRoute('show-bag') }}">
+            <a class="nav-link" href={{ route('show-bag') }} wire:navigate>
+                <i class="fas fa-archive"></i>
+                <span>{{ __('จัดการถุงไปรษณีย์') }}</span>
             </a>
         </li>
 
@@ -271,9 +281,9 @@
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
-            <div class="container-fluid">
+            <div class="container">
 
-                @yield('main-content')
+                {{ $slot }}
 
             </div>
             <!-- /.container-fluid -->
@@ -281,7 +291,7 @@
         </div>
         <!-- End of Main Content -->
 
-        <!-- Footer -->
+        {{-- <!-- Footer -->
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
@@ -289,8 +299,9 @@
                 </div>
             </div>
         </footer>
-        <!-- End of Footer -->
+        <!-- End of Footer --> --}}
 
+        @livewireScripts
     </div>
     <!-- End of Content Wrapper -->
 

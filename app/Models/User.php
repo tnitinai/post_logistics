@@ -10,14 +10,17 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
-
+    #protected $connection = 'pgsql';
+    protected $table = 'Employee';
+    protected $primaryKey = 'id';
+    public $timestamps = false;
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'last_name', 'email', 'password',
+        'id', 'fname', 'lname', 'role_id', 'post_office_id', 'password',
     ];
 
     /**
@@ -30,26 +33,17 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
-    /**
      * Get the user's full name.
      *
      * @return string
      */
     public function getFullNameAttribute()
     {
-        if (is_null($this->last_name)) {
-            return "{$this->name}";
+        if (is_null($this->lname)) {
+            return "{$this->fname}";
         }
 
-        return "{$this->name} {$this->last_name}";
+        return "{$this->fname} {$this->lname}";
     }
 
     /**
@@ -58,8 +52,8 @@ class User extends Authenticatable
      * @param string $value
      * @return void
      */
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = bcrypt($value);
-    }
+    // public function setPasswordAttribute($value)
+    // {
+    //     $this->attributes['password'] = bcrypt($value);
+    // }
 }

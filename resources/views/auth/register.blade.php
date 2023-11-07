@@ -28,15 +28,23 @@
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="name" placeholder="{{ __('Name') }}" value="{{ old('name') }}" required autofocus>
+                                        <input type="text" class="form-control form-control-user" name="id" placeholder="{{ __('หมายเลขพนักงาน') }}" value="{{ old('id') }}" required autofocus>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="last_name" placeholder="{{ __('Last Name') }}" value="{{ old('last_name') }}" required>
+                                        <input type="text" class="form-control form-control-user" name="fname" placeholder="{{ __('Name') }}" value="{{ old('fname') }}" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user" name="email" placeholder="{{ __('E-Mail Address') }}" value="{{ old('email') }}" required>
+                                        <input type="text" class="form-control form-control-user" name="lname" placeholder="{{ __('Last Name') }}" value="{{ old('lname') }}" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" name="role_id" placeholder="{{ __('หน้าที่') }}" value="{{ old('role_id') }}" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" name="post_office_id" placeholder="{{ __('สถานที่ทำงาน') }}" value="{{ old('post_office_id') }}" required>
                                     </div>
 
                                     <div class="form-group">
