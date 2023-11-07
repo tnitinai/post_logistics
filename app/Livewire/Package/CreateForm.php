@@ -44,31 +44,32 @@ class CreateForm extends Component
         $result = null;
         // sum price in packages
         $total_price = array_sum(array_map(fn ($package) => $package['price'], $this->packages));
-        // DB::transaction(function () use ($total_price, &$result) {
+        DB::transaction(function () use ($total_price, &$result) {
 
-        //     // create invoice
-        //     $invoice_id = Invoice::generateInvoice($total_price);
+            // create invoice
+            $invoice_id = Invoice::generateInvoice($total_price);
 
-        //     // create packages
-        //     foreach ($this->packages as $package) {
-        //         // generate tracking_number
-        //         $tracking_nb = Carbon::now()->format('ymd') . rand(1000000,9999999) . "TH";
+            // create packages
+            foreach ($this->packages as $package) {
+                // generate tracking_number
+                $tracking_nb = Carbon::now()->format('ymd') . rand(1000000,9999999) . "TH";
 
-        //         // append other attributes to package
-        //         $package['tracking_number'] = $tracking_nb;
-        //         $package['sender_id'] = $this->sender['sender_id'];
-        //         $package['invoice_id'] = $invoice_id;
-        //         $package['from_postal_code'] = $this->sender['from_postal_code'];
+                // append other attributes to package
+                $package['tracking_number'] = $tracking_nb;
+                $package['sender_id'] = $this->sender['sender_id'];
+                $package['invoice_id'] = $invoice_id;
+                $package['from_postal_code'] = $this->sender['from_postal_code'];
 
-        //         // save to database
-        //         Package::create($package);
-        //     }
+                // save to database
+                Package::create($package);
+            }
 
-        //     $result = $invoice_id;
-        // });
-        $result = 123123123123123;
+            $result = $invoice_id;
+        });
+
         if($result)
         {
+            session()->flash('status', 'บันทึกข้อมูลพัสดุสำเร็จ');
             $this->redirect('receipt/' . $result);
         }
 
