@@ -18,15 +18,20 @@ class ShowAvailablePackages extends Component
     public function showPackages($bag)
     {
         $this->bagTag = $bag['bag_id'];
-        $packages = Package::where('from_postal_code', $bag['from_postal_code'])
-            ->whereHas('statuses', function(Builder $q) {
-                $q->where('package_movement.status_id', 1);
-            })
-            ->get();
+        $this->packages = Package::where('from_postal_code', $bag['from_postal_code'])
+            ->whereHas('movements', function (Builder $q) {
+                $q->where('status_id', 2);
+            })->get();
+        // $packages = Package::where('from_postal_code', $bag['from_postal_code'])
+        //     ->whereHas('statuses', function(Builder $q) {
+        //         $q->where('package_movement.status_id', 1);
+        //     })
+        //     ->get();
 
-        foreach ($packages as $package) {
-            $this->packages = $package->statuses()->orderBy('status_id')->get();
-        }
+        // foreach ($packages as $package) {
+        //     $this->packages = $package->statuses;
+        // }
+
         // $packages->filter(function (Package $package) {
         //     // each Package
         //     $this->packages = $package->statuses->filter(function (Status $status) {

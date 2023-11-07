@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 use App\Models\PostalCode;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Package extends Model
 {
@@ -55,10 +56,22 @@ class Package extends Model
      */
     public function statuses(): BelongsToMany
     {
-        return $this->belongsToMany(Status::class, 'Package_Status', 'tracking_id', 'status_id', 'tracking_number')
-            ->as('package_movement')
-            ->withPivot('status_id')
-            ->withTimestamps();
+        return $this->belongsToMany(Status::class, null, 'tracking_id', 'status_id', 'tracking_number')
+            ->using(PackageMovement::class);
+        //return $this->belongsToMany(Status::class, 'Package_Status', 'tracking_id', 'status_id', 'tracking_number')
+        //->as('package_movement')
+        //->withPivot('status_id')
+        //->withTimestamps();
+    }
+
+    /**
+     * Get all of the movements for the Package
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function movements(): HasMany
+    {
+        return $this->hasMany(PackageMovement::class, 'tracking_id', 'tracking_number');
     }
 
     public function scopeCalculateServiceFee($q, $weight)

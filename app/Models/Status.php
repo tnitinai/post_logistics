@@ -28,10 +28,11 @@ class Status extends Model
      */
     public function packages(): BelongsToMany
     {
-        return $this->belongsToMany(Package::class, 'Package_Status', 'status_id', 'tracking_id', 'status_id')
-            ->as('package_movement')
-            ->withPivot('status_id')
-            ->withTimestamps()
+        return $this->belongsToMany(Package::class, null, 'status_id', 'tracking_id', 'status_id')
+            ->using(PackageMovement::class)
+            // ->as('package_movement')
+            // ->withPivot('status_id')
+            // ->withTimestamps()
             ;
     }
 }
