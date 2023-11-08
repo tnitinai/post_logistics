@@ -4,8 +4,8 @@
     </div>
 
     <div class="card-body">
-        <livewire:bag.create-bag>
-        <livewire:bag.show-available-packages>
+        <livewire:bag.create-bag />
+        <livewire:bag.show-available-packages />
     </div>
 
     <div class="card-footer">

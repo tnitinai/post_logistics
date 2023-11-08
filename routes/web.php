@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Bag\ManageBag;
 use App\Livewire\Package\CreateForm;
 use App\Livewire\Invoice\ShowReceipt;
 use App\Livewire\Bag\ShowBag;
@@ -31,6 +32,7 @@ Route::put('/profile', 'ProfileController@update')->name('profile.update');
 Route::get('/package', [CreateForm::class, '__invoke'])->name('package');
 Route::get('/receipt/{invoice_id}', [ShowReceipt::class, '__invoke'])->name('show-receipt');
 Route::get('/bag', [ShowBag::class, '__invoke'])->name('show-bag');
+Route::get('/bag/manage', [ManageBag::class, '__invoke'])->name('manage-bag');
 
 Route::get('/about', function () {
     return view('about');

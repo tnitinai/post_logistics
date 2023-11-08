@@ -8,40 +8,56 @@ use App\Models\Status;
 use Livewire\Component;
 use Livewire\Attributes\On;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\DB;
 
 class ShowAvailablePackages extends Component
 {
     public $packages = [];
+    public $selectedPackages = [];
     public $bagTag;
+    public $destination;
 
     #[On('bag-created')]
     public function showPackages($bag)
     {
         $this->bagTag = $bag['bag_id'];
+        $this->destination = $bag['to_postal_code'];
+
+        $this->packages = Package::where('from_postal_code', $bag['from_postal_code'])
+            ->where('current_status', 1)->get();
+
+        // $this->selectedPackages = [$this->packages->first()->tracking_number];
+        /*
         $this->packages = Package::where('from_postal_code', $bag['from_postal_code'])
             ->whereHas('movements', function (Builder $q) {
                 $q->where('status_id', 2);
             })->get();
-        // $packages = Package::where('from_postal_code', $bag['from_postal_code'])
-        //     ->whereHas('statuses', function(Builder $q) {
-        //         $q->where('package_movement.status_id', 1);
-        //     })
-        //     ->get();
+        */
+    }
 
-        // foreach ($packages as $package) {
-        //     $this->packages = $package->statuses;
-        // }
+    public function saveBag()
+    {
+        DB::transaction(function(){
+            //create Bag
+            $bag = Bag::create(['bag_id' => $this->bagTag, 'to_postal_code' => $this->destination]);
 
-        // $packages->filter(function (Package $package) {
-        //     // each Package
-        //     $this->packages = $package->statuses->filter(function (Status $status) {
-        //         return ($status->pivot->status_id > 0);
-        //     });
-        // });
-        // $this->packages = $packages->statuses()->filter(function(Status $status) {
-        //     return ($status->pivot->detail);
-        // });
-        dd($this->packages);
+            foreach ($this->selectedPackages as  $package_id) {
+                $package = Package::find($package_id);
+
+                //update bag's packages
+                $package->update(['bag_id' => $bag->bag_id, 'current_status' => 2]);
+
+                // add status history
+                $package->movements()->create(['status_id'=>2]);
+            }
+        });
+
+        session()->flash('status', [
+            'type' => 'success',
+            'message' => 'บันทึกข้อมูลถุงไปรษณ๊ย์สำเร็จ'
+        ]);
+
+        $this->redirect('bag');
     }
 
     public function render()

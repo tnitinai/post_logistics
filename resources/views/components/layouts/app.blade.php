@@ -69,10 +69,18 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Bag Management -->
+            <!-- Nav Item - Create Bag -->
             <li class="nav-item {{ Nav::isRoute('show-bag') }}">
                 <a class="nav-link" href={{ route('show-bag') }} wire:navigate>
                     <i class="fas fa-archive"></i>
+                    <span>{{ __('สร้างถุงไปรษณีย์') }}</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Bag Management -->
+            <li class="nav-item {{ Nav::isRoute('manage-bag') }}">
+                <a class="nav-link" href={{ route('manage-bag') }} wire:navigate>
+                    <i class="fas fa-edit"></i>
                     <span>{{ __('จัดการถุงไปรษณีย์') }}</span>
                 </a>
             </li>
@@ -311,8 +319,8 @@
                 <!-- Begin Page Content -->
                 <div class="container">
                     @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
+                        <div class="alert alert-{{session('status.type')}}">
+                            {{ session('status.message') }}
                         </div>
                     @endif
                     {{ $slot }}

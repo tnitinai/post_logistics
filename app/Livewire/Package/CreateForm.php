@@ -19,7 +19,8 @@ class CreateForm extends Component
     public $sender = [];
     public $postalCodes;
 
-    public function mount() {
+    public function mount()
+    {
         $this->senders = Sender::all();
         $this->postalCodes = PostalCode::all();
     }
@@ -30,7 +31,6 @@ class CreateForm extends Component
         $postal_loc = PostalCode::findOrFail($this->package['to_postal_code'])->postal_location;
         $this->package['postal_location'] = $postal_loc;
         array_push($this->packages, $this->package);
-
     }
 
     public function updatedPackageWeight()
@@ -52,7 +52,7 @@ class CreateForm extends Component
             // create packages
             foreach ($this->packages as $package) {
                 // generate tracking_number
-                $tracking_nb = Carbon::now()->format('ymd') . rand(1000000,9999999) . "TH";
+                $tracking_nb = Carbon::now()->format('ymd') . rand(1000000, 9999999) . "TH";
 
                 // append other attributes to package
                 $package['tracking_number'] = $tracking_nb;
@@ -67,13 +67,10 @@ class CreateForm extends Component
             $result = $invoice_id;
         });
 
-        if($result)
-        {
-            session()->flash('status', 'บันทึกข้อมูลพัสดุสำเร็จ');
+        if ($result) {
+            session()->flash('status', ['type' => 'success', 'message' => 'บันทึกข้อมูลพัสดุสำเร็จ']);
             $this->redirect('receipt/' . $result);
         }
-
-
     }
 
     public function render()
