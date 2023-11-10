@@ -17430,3 +17430,866 @@ Did you mean one of these?
 #57 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #58 {main}
 "} 
+[2023-11-10 21:44:16] local.ERROR: Attempt to read property "district" on null {"view":{"view":"/Applications/XAMPP/xamppfiles/htdocs/post_logistics/resources/views/livewire/bag/show-packages.blade.php","data":[]},"userId":597048,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Attempt to read property \"district\" on null at /Applications/XAMPP/xamppfiles/htdocs/post_logistics/resources/views/livewire/bag/show-packages.blade.php:16)
+[stacktrace]
+#0 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', '/Applications/X...', 16)
+#1 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/resources/views/livewire/bag/show-packages.blade.php(16): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', '/Applications/X...', 16)
+#2 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(37): include('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(38): App\\Livewire\\Bag\\ShowPackages->Livewire\\Mechanisms\\ExtendBlade\\{closure}()
+#4 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(16): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#8 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#9 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/HandleComponents/HandleComponents.php(245): Illuminate\\View\\View->render(Object(Closure))
+#10 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/HandleComponents/HandleComponents.php(289): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->Livewire\\Mechanisms\\HandleComponents\\{closure}()
+#11 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/HandleComponents/HandleComponents.php(235): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->trackInRenderStack(Object(App\\Livewire\\Bag\\ShowPackages), Object(Closure))
+#12 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/HandleComponents/HandleComponents.php(111): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->render(Object(App\\Livewire\\Bag\\ShowPackages))
+#13 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/LivewireManager.php(96): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->update(Array, Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/HandleRequests/HandleRequests.php(89): Livewire\\LivewireManager->update(Array, Array, Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): Livewire\\Mechanisms\\HandleRequests\\HandleRequests->handleUpdate()
+#16 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Livewire\\Mechanisms\\HandleRequests\\HandleRequests), 'handleUpdate')
+#17 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Routing\\Route->run()
+#19 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#28 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#35 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#36 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#37 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#38 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#39 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#40 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#56 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#57 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#58 {main}
+
+[previous exception] [object] (ErrorException(code: 0): Attempt to read property \"district\" on null at /Applications/XAMPP/xamppfiles/htdocs/post_logistics/storage/framework/views/3d1972f6343eaab2ee724f3ab098c642.php:16)
+[stacktrace]
+#0 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', '/Applications/X...', 16)
+#1 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/storage/framework/views/3d1972f6343eaab2ee724f3ab098c642.php(16): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', '/Applications/X...', 16)
+#2 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(37): include('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(38): App\\Livewire\\Bag\\ShowPackages->Livewire\\Mechanisms\\ExtendBlade\\{closure}()
+#4 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(16): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#8 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#9 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/HandleComponents/HandleComponents.php(245): Illuminate\\View\\View->render(Object(Closure))
+#10 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/HandleComponents/HandleComponents.php(289): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->Livewire\\Mechanisms\\HandleComponents\\{closure}()
+#11 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/HandleComponents/HandleComponents.php(235): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->trackInRenderStack(Object(App\\Livewire\\Bag\\ShowPackages), Object(Closure))
+#12 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/HandleComponents/HandleComponents.php(111): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->render(Object(App\\Livewire\\Bag\\ShowPackages))
+#13 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/LivewireManager.php(96): Livewire\\Mechanisms\\HandleComponents\\HandleComponents->update(Array, Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/HandleRequests/HandleRequests.php(89): Livewire\\LivewireManager->update(Array, Array, Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): Livewire\\Mechanisms\\HandleRequests\\HandleRequests->handleUpdate()
+#16 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Livewire\\Mechanisms\\HandleRequests\\HandleRequests), 'handleUpdate')
+#17 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#18 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Routing\\Route->run()
+#19 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#28 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#35 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#36 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#37 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#38 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#39 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#40 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#56 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#57 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#58 {main}
+"} 
+[2023-11-10 21:52:13] local.ERROR: Command "livewire:livewire" is not defined.
+
+Did you mean one of these?
+    livewire:attribute
+    livewire:configure-s3-upload-cleanup
+    livewire:copy
+    livewire:delete
+    livewire:form
+    livewire:layout
+    livewire:make
+    livewire:move
+    livewire:publish
+    livewire:stubs
+    livewire:upgrade
+    make:livewire {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"livewire:livewire\" is not defined.
+
+Did you mean one of these?
+    livewire:attribute
+    livewire:configure-s3-upload-cleanup
+    livewire:copy
+    livewire:delete
+    livewire:form
+    livewire:layout
+    livewire:make
+    livewire:move
+    livewire:publish
+    livewire:stubs
+    livewire:upgrade
+    make:livewire at /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/symfony/console/Application.php:702)
+[stacktrace]
+#0 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/symfony/console/Application.php(256): Symfony\\Component\\Console\\Application->find('livewire:livewi...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/symfony/console/Application.php(168): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 {main}
+"} 
+[2023-11-10 22:31:02] local.ERROR: Command "livewire:remove" is not defined.
+
+Did you mean one of these?
+    livewire:attribute
+    livewire:configure-s3-upload-cleanup
+    livewire:copy
+    livewire:delete
+    livewire:form
+    livewire:layout
+    livewire:make
+    livewire:move
+    livewire:publish
+    livewire:stubs
+    livewire:upgrade {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"livewire:remove\" is not defined.
+
+Did you mean one of these?
+    livewire:attribute
+    livewire:configure-s3-upload-cleanup
+    livewire:copy
+    livewire:delete
+    livewire:form
+    livewire:layout
+    livewire:make
+    livewire:move
+    livewire:publish
+    livewire:stubs
+    livewire:upgrade at /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/symfony/console/Application.php:702)
+[stacktrace]
+#0 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/symfony/console/Application.php(256): Symfony\\Component\\Console\\Application->find('livewire:remove')
+#1 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/symfony/console/Application.php(168): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 {main}
+"} 
+[2023-11-10 22:34:13] local.ERROR: Route [manage-vehicle] not defined. {"view":{"view":"/Applications/XAMPP/xamppfiles/htdocs/post_logistics/resources/views/components/layouts/app.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-1066982167 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#467</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1066982167\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","attributes":"<pre class=sf-dump id=sf-dump-1804678103 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentAttributeBag</span> {<a class=sf-dump-ref>#471</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1804678103\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","slot":"<pre class=sf-dump id=sf-dump-395972762 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentSlot</span> {<a class=sf-dump-ref>#479</a><samp data-depth=1 class=sf-dump-expanded>
+  +<span class=sf-dump-public title=\"Public property\">attributes</span>: <span class=sf-dump-note title=\"Illuminate\\View\\ComponentAttributeBag
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentAttributeBag</span> {<a class=sf-dump-ref>#476</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+  </samp>}
+  #<span class=sf-dump-protected title=\"Protected property\">contents</span>: \"\"\"
+    <span class=sf-dump-str title=\"1007 characters\">&lt;div wire:snapshot=&quot;{&amp;quot;data&amp;quot;:{&amp;quot;shownTransportForm&amp;quot;:false},&amp;quot;memo&amp;quot;:{&amp;quot;id&amp;quot;:&amp;quot;LePnatJwFbo0GetZ7fo3&amp;quot;,&amp;quot;name&amp;quot;:&amp;quot;transport.manage-transport&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;transportation&amp;quot;,&amp;quot;method&amp;quot;:&amp;quot;GET&amp;quot;,&amp;quot;children&amp;quot;:[],&amp;quot;errors&amp;quot;:[],&amp;quot;locale&amp;quot;:&amp;quot;en&amp;quot;},&amp;quot;checksum&amp;quot;:&amp;quot;1636cbf044e1d527ac7b0c185b6a4f8171e0d1191773768f339cf505f1e7a0c3&amp;quot;}&quot; wire:effects=&quot;[]&quot; wire:id=&quot;LePnatJwFbo0GetZ7fo3&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">    &lt;div class=&quot;card&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-header d-flex justify-content-between&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">            &lt;h5&gt;&#3592;&#3633;&#3604;&#3585;&#3634;&#3619;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;&lt;/h5&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">            &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot; wire:click=&#039;onClickCreateTransport&#039;&gt;&#3626;&#3619;&#3657;&#3634;&#3591;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;&#3651;&#3627;&#3617;&#3656;&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-body&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">            &#3605;&#3634;&#3619;&#3634;&#3591;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-footer d-flex justify-content-center&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">    &lt;!--[if BLOCK]&gt;&lt;![endif]--&gt; &lt;!--[if ENDBLOCK]&gt;&lt;![endif]--&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">&lt;/div&gt;</span>
+    \"\"\"
+</samp>}
+</pre><script>Sfdump(\"sf-dump-395972762\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","__laravel_slots":"<pre class=sf-dump id=sf-dump-641599555 data-indent-pad=\"  \"><span class=sf-dump-note>array:2</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>__default</span>\" => <span class=sf-dump-note title=\"Illuminate\\Support\\HtmlString
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Support</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>HtmlString</span> {<a class=sf-dump-ref>#477</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">html</span>: \"\"
+  </samp>}
+  \"<span class=sf-dump-key>slot</span>\" => <span class=sf-dump-note title=\"Illuminate\\View\\ComponentSlot
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentSlot</span> {<a class=sf-dump-ref>#479</a><samp data-depth=2 class=sf-dump-compact>
+    +<span class=sf-dump-public title=\"Public property\">attributes</span>: <span class=sf-dump-note title=\"Illuminate\\View\\ComponentAttributeBag
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentAttributeBag</span> {<a class=sf-dump-ref>#476</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+    </samp>}
+    #<span class=sf-dump-protected title=\"Protected property\">contents</span>: \"\"\"
+      <span class=sf-dump-str title=\"1007 characters\">&lt;div wire:snapshot=&quot;{&amp;quot;data&amp;quot;:{&amp;quot;shownTransportForm&amp;quot;:false},&amp;quot;memo&amp;quot;:{&amp;quot;id&amp;quot;:&amp;quot;LePnatJwFbo0GetZ7fo3&amp;quot;,&amp;quot;name&amp;quot;:&amp;quot;transport.manage-transport&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;transportation&amp;quot;,&amp;quot;method&amp;quot;:&amp;quot;GET&amp;quot;,&amp;quot;children&amp;quot;:[],&amp;quot;errors&amp;quot;:[],&amp;quot;locale&amp;quot;:&amp;quot;en&amp;quot;},&amp;quot;checksum&amp;quot;:&amp;quot;1636cbf044e1d527ac7b0c185b6a4f8171e0d1191773768f339cf505f1e7a0c3&amp;quot;}&quot; wire:effects=&quot;[]&quot; wire:id=&quot;LePnatJwFbo0GetZ7fo3&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">    &lt;div class=&quot;card&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-header d-flex justify-content-between&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">            &lt;h5&gt;&#3592;&#3633;&#3604;&#3585;&#3634;&#3619;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;&lt;/h5&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">            &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot; wire:click=&#039;onClickCreateTransport&#039;&gt;&#3626;&#3619;&#3657;&#3634;&#3591;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;&#3651;&#3627;&#3617;&#3656;&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-body&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">            &#3605;&#3634;&#3619;&#3634;&#3591;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-footer d-flex justify-content-center&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">    &lt;!--[if BLOCK]&gt;&lt;![endif]--&gt; &lt;!--[if ENDBLOCK]&gt;&lt;![endif]--&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">&lt;/div&gt;</span>
+      \"\"\"
+  </samp>}
+</samp>]
+</pre><script>Sfdump(\"sf-dump-641599555\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":597048,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Route [manage-vehicle] not defined. at /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:467)
+[stacktrace]
+#0 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(810): Illuminate\\Routing\\UrlGenerator->route('manage-vehicle', Array, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/resources/views/components/layouts/app.blade.php(90): route('manage-vehicle')
+#2 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Applications/X...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#10 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#11 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(104): Illuminate\\View\\View->render()
+#12 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/storage/framework/views/4943bc92ebba41e8b0e508149542e0ad.blade.php(16): Illuminate\\View\\Factory->renderComponent()
+#13 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/Applications/X...')
+#14 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#15 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Applications/X...', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Applications/X...', Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#21 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#22 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(320): Illuminate\\View\\View->render()
+#23 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(353): Illuminate\\View\\Compilers\\BladeCompiler::render('    <?php $layo...', Array)
+#24 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportPageComponents/SupportPageComponents.php(150): Illuminate\\Support\\Facades\\Facade::__callStatic('render', Array)
+#25 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportPageComponents/HandlesPageComponents.php(24): Livewire\\Features\\SupportPageComponents\\SupportPageComponents::renderContentsIntoLayout('<div wire:snaps...', Object(Livewire\\Features\\SupportPageComponents\\PageComponentConfig))
+#26 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): Livewire\\Component->__invoke()
+#27 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Livewire\\Transport\\ManageTransport), '__invoke')
+#28 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#29 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Routing\\Route->run()
+#30 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#39 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#47 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#48 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#49 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#50 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#67 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#68 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#69 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#70 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#71 {main}
+
+[previous exception] [object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [manage-vehicle] not defined. at /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:467)
+[stacktrace]
+#0 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(810): Illuminate\\Routing\\UrlGenerator->route('manage-vehicle', Array, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/storage/framework/views/5176f6a8352ce6ad3bf6d7e9dfd14272.php(89): route('manage-vehicle')
+#2 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Applications/X...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#10 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#11 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(104): Illuminate\\View\\View->render()
+#12 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/storage/framework/views/e753509c214d43951bfc27a7b7aff893.php(17): Illuminate\\View\\Factory->renderComponent()
+#13 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/Applications/X...')
+#14 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#15 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Applications/X...', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Applications/X...', Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#21 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#22 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(320): Illuminate\\View\\View->render()
+#23 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(353): Illuminate\\View\\Compilers\\BladeCompiler::render('    <?php $layo...', Array)
+#24 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportPageComponents/SupportPageComponents.php(150): Illuminate\\Support\\Facades\\Facade::__callStatic('render', Array)
+#25 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportPageComponents/HandlesPageComponents.php(24): Livewire\\Features\\SupportPageComponents\\SupportPageComponents::renderContentsIntoLayout('<div wire:snaps...', Object(Livewire\\Features\\SupportPageComponents\\PageComponentConfig))
+#26 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): Livewire\\Component->__invoke()
+#27 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Livewire\\Transport\\ManageTransport), '__invoke')
+#28 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#29 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Routing\\Route->run()
+#30 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#39 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#47 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#48 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#49 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#50 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#67 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#68 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#69 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#70 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#71 {main}
+"} 
+[2023-11-10 22:35:02] local.ERROR: Route [manage-vehicle] not defined. {"view":{"view":"/Applications/XAMPP/xamppfiles/htdocs/post_logistics/resources/views/components/layouts/app.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-2103441125 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#469</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-2103441125\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","attributes":"<pre class=sf-dump id=sf-dump-1549648741 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentAttributeBag</span> {<a class=sf-dump-ref>#473</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1549648741\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","slot":"<pre class=sf-dump id=sf-dump-1869453120 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentSlot</span> {<a class=sf-dump-ref>#481</a><samp data-depth=1 class=sf-dump-expanded>
+  +<span class=sf-dump-public title=\"Public property\">attributes</span>: <span class=sf-dump-note title=\"Illuminate\\View\\ComponentAttributeBag
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentAttributeBag</span> {<a class=sf-dump-ref>#478</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+  </samp>}
+  #<span class=sf-dump-protected title=\"Protected property\">contents</span>: \"\"\"
+    <span class=sf-dump-str title=\"1007 characters\">&lt;div wire:snapshot=&quot;{&amp;quot;data&amp;quot;:{&amp;quot;shownTransportForm&amp;quot;:false},&amp;quot;memo&amp;quot;:{&amp;quot;id&amp;quot;:&amp;quot;XiTcYjBXPqbQGJtpsyPU&amp;quot;,&amp;quot;name&amp;quot;:&amp;quot;transport.manage-transport&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;transportation&amp;quot;,&amp;quot;method&amp;quot;:&amp;quot;GET&amp;quot;,&amp;quot;children&amp;quot;:[],&amp;quot;errors&amp;quot;:[],&amp;quot;locale&amp;quot;:&amp;quot;en&amp;quot;},&amp;quot;checksum&amp;quot;:&amp;quot;8abfd1a4d422585dc29c719f4ae9f892931796f1bf65962384ded16f3e5e8efc&amp;quot;}&quot; wire:effects=&quot;[]&quot; wire:id=&quot;XiTcYjBXPqbQGJtpsyPU&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">    &lt;div class=&quot;card&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-header d-flex justify-content-between&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">            &lt;h5&gt;&#3592;&#3633;&#3604;&#3585;&#3634;&#3619;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;&lt;/h5&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">            &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot; wire:click=&#039;onClickCreateTransport&#039;&gt;&#3626;&#3619;&#3657;&#3634;&#3591;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;&#3651;&#3627;&#3617;&#3656;&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-body&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">            &#3605;&#3634;&#3619;&#3634;&#3591;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-footer d-flex justify-content-center&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">    &lt;!--[if BLOCK]&gt;&lt;![endif]--&gt; &lt;!--[if ENDBLOCK]&gt;&lt;![endif]--&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">&lt;/div&gt;</span>
+    \"\"\"
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1869453120\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","__laravel_slots":"<pre class=sf-dump id=sf-dump-1384976463 data-indent-pad=\"  \"><span class=sf-dump-note>array:2</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>__default</span>\" => <span class=sf-dump-note title=\"Illuminate\\Support\\HtmlString
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Support</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>HtmlString</span> {<a class=sf-dump-ref>#479</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">html</span>: \"\"
+  </samp>}
+  \"<span class=sf-dump-key>slot</span>\" => <span class=sf-dump-note title=\"Illuminate\\View\\ComponentSlot
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentSlot</span> {<a class=sf-dump-ref>#481</a><samp data-depth=2 class=sf-dump-compact>
+    +<span class=sf-dump-public title=\"Public property\">attributes</span>: <span class=sf-dump-note title=\"Illuminate\\View\\ComponentAttributeBag
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentAttributeBag</span> {<a class=sf-dump-ref>#478</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+    </samp>}
+    #<span class=sf-dump-protected title=\"Protected property\">contents</span>: \"\"\"
+      <span class=sf-dump-str title=\"1007 characters\">&lt;div wire:snapshot=&quot;{&amp;quot;data&amp;quot;:{&amp;quot;shownTransportForm&amp;quot;:false},&amp;quot;memo&amp;quot;:{&amp;quot;id&amp;quot;:&amp;quot;XiTcYjBXPqbQGJtpsyPU&amp;quot;,&amp;quot;name&amp;quot;:&amp;quot;transport.manage-transport&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;transportation&amp;quot;,&amp;quot;method&amp;quot;:&amp;quot;GET&amp;quot;,&amp;quot;children&amp;quot;:[],&amp;quot;errors&amp;quot;:[],&amp;quot;locale&amp;quot;:&amp;quot;en&amp;quot;},&amp;quot;checksum&amp;quot;:&amp;quot;8abfd1a4d422585dc29c719f4ae9f892931796f1bf65962384ded16f3e5e8efc&amp;quot;}&quot; wire:effects=&quot;[]&quot; wire:id=&quot;XiTcYjBXPqbQGJtpsyPU&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">    &lt;div class=&quot;card&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-header d-flex justify-content-between&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">            &lt;h5&gt;&#3592;&#3633;&#3604;&#3585;&#3634;&#3619;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;&lt;/h5&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">            &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot; wire:click=&#039;onClickCreateTransport&#039;&gt;&#3626;&#3619;&#3657;&#3634;&#3591;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;&#3651;&#3627;&#3617;&#3656;&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-body&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">            &#3605;&#3634;&#3619;&#3634;&#3591;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-footer d-flex justify-content-center&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">    &lt;!--[if BLOCK]&gt;&lt;![endif]--&gt; &lt;!--[if ENDBLOCK]&gt;&lt;![endif]--&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">&lt;/div&gt;</span>
+      \"\"\"
+  </samp>}
+</samp>]
+</pre><script>Sfdump(\"sf-dump-1384976463\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":597048,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Route [manage-vehicle] not defined. at /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:467)
+[stacktrace]
+#0 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(810): Illuminate\\Routing\\UrlGenerator->route('manage-vehicle', Array, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/resources/views/components/layouts/app.blade.php(90): route('manage-vehicle')
+#2 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Applications/X...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#10 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#11 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(104): Illuminate\\View\\View->render()
+#12 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/storage/framework/views/4943bc92ebba41e8b0e508149542e0ad.blade.php(16): Illuminate\\View\\Factory->renderComponent()
+#13 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/Applications/X...')
+#14 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#15 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Applications/X...', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Applications/X...', Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#21 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#22 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(320): Illuminate\\View\\View->render()
+#23 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(353): Illuminate\\View\\Compilers\\BladeCompiler::render('    <?php $layo...', Array)
+#24 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportPageComponents/SupportPageComponents.php(150): Illuminate\\Support\\Facades\\Facade::__callStatic('render', Array)
+#25 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportPageComponents/HandlesPageComponents.php(24): Livewire\\Features\\SupportPageComponents\\SupportPageComponents::renderContentsIntoLayout('<div wire:snaps...', Object(Livewire\\Features\\SupportPageComponents\\PageComponentConfig))
+#26 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): Livewire\\Component->__invoke()
+#27 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Livewire\\Transport\\ManageTransport), '__invoke')
+#28 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#29 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Routing\\Route->run()
+#30 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#39 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#47 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#48 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#49 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#50 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#67 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#68 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#69 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#70 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#71 {main}
+
+[previous exception] [object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [manage-vehicle] not defined. at /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:467)
+[stacktrace]
+#0 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(810): Illuminate\\Routing\\UrlGenerator->route('manage-vehicle', Array, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/storage/framework/views/5176f6a8352ce6ad3bf6d7e9dfd14272.php(89): route('manage-vehicle')
+#2 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Applications/X...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#10 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#11 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(104): Illuminate\\View\\View->render()
+#12 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/storage/framework/views/e753509c214d43951bfc27a7b7aff893.php(17): Illuminate\\View\\Factory->renderComponent()
+#13 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/Applications/X...')
+#14 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#15 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Applications/X...', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Applications/X...', Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#21 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#22 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(320): Illuminate\\View\\View->render()
+#23 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(353): Illuminate\\View\\Compilers\\BladeCompiler::render('    <?php $layo...', Array)
+#24 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportPageComponents/SupportPageComponents.php(150): Illuminate\\Support\\Facades\\Facade::__callStatic('render', Array)
+#25 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportPageComponents/HandlesPageComponents.php(24): Livewire\\Features\\SupportPageComponents\\SupportPageComponents::renderContentsIntoLayout('<div wire:snaps...', Object(Livewire\\Features\\SupportPageComponents\\PageComponentConfig))
+#26 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): Livewire\\Component->__invoke()
+#27 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Livewire\\Transport\\ManageTransport), '__invoke')
+#28 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#29 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Routing\\Route->run()
+#30 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#39 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#47 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#48 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#49 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#50 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#67 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#68 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#69 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#70 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#71 {main}
+"} 
+[2023-11-10 22:35:12] local.ERROR: Route [manage-vehicle] not defined. {"view":{"view":"/Applications/XAMPP/xamppfiles/htdocs/post_logistics/resources/views/components/layouts/app.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-842133299 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#469</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-842133299\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","attributes":"<pre class=sf-dump id=sf-dump-734272368 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentAttributeBag</span> {<a class=sf-dump-ref>#473</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-734272368\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","slot":"<pre class=sf-dump id=sf-dump-284276516 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\View\\ComponentSlot</span> {<a class=sf-dump-ref>#481</a><samp data-depth=1 class=sf-dump-expanded>
+  +<span class=sf-dump-public title=\"Public property\">attributes</span>: <span class=sf-dump-note title=\"Illuminate\\View\\ComponentAttributeBag
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentAttributeBag</span> {<a class=sf-dump-ref>#478</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+  </samp>}
+  #<span class=sf-dump-protected title=\"Protected property\">contents</span>: \"\"\"
+    <span class=sf-dump-str title=\"1007 characters\">&lt;div wire:snapshot=&quot;{&amp;quot;data&amp;quot;:{&amp;quot;shownTransportForm&amp;quot;:false},&amp;quot;memo&amp;quot;:{&amp;quot;id&amp;quot;:&amp;quot;qFdnUoVzZfbo0c2BU37R&amp;quot;,&amp;quot;name&amp;quot;:&amp;quot;transport.manage-transport&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;transportation&amp;quot;,&amp;quot;method&amp;quot;:&amp;quot;GET&amp;quot;,&amp;quot;children&amp;quot;:[],&amp;quot;errors&amp;quot;:[],&amp;quot;locale&amp;quot;:&amp;quot;en&amp;quot;},&amp;quot;checksum&amp;quot;:&amp;quot;159cd4f3c52cdab1ef6fa5bbc7c1ab31ac292794c0a64112507a5e12aeb03588&amp;quot;}&quot; wire:effects=&quot;[]&quot; wire:id=&quot;qFdnUoVzZfbo0c2BU37R&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">    &lt;div class=&quot;card&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-header d-flex justify-content-between&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">            &lt;h5&gt;&#3592;&#3633;&#3604;&#3585;&#3634;&#3619;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;&lt;/h5&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">            &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot; wire:click=&#039;onClickCreateTransport&#039;&gt;&#3626;&#3619;&#3657;&#3634;&#3591;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;&#3651;&#3627;&#3617;&#3656;&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-body&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">            &#3605;&#3634;&#3619;&#3634;&#3591;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-footer d-flex justify-content-center&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">    &lt;!--[if BLOCK]&gt;&lt;![endif]--&gt; &lt;!--[if ENDBLOCK]&gt;&lt;![endif]--&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+    <span class=sf-dump-str title=\"1007 characters\">&lt;/div&gt;</span>
+    \"\"\"
+</samp>}
+</pre><script>Sfdump(\"sf-dump-284276516\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","__laravel_slots":"<pre class=sf-dump id=sf-dump-302391331 data-indent-pad=\"  \"><span class=sf-dump-note>array:2</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>__default</span>\" => <span class=sf-dump-note title=\"Illuminate\\Support\\HtmlString
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Support</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>HtmlString</span> {<a class=sf-dump-ref>#479</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">html</span>: \"\"
+  </samp>}
+  \"<span class=sf-dump-key>slot</span>\" => <span class=sf-dump-note title=\"Illuminate\\View\\ComponentSlot
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentSlot</span> {<a class=sf-dump-ref>#481</a><samp data-depth=2 class=sf-dump-compact>
+    +<span class=sf-dump-public title=\"Public property\">attributes</span>: <span class=sf-dump-note title=\"Illuminate\\View\\ComponentAttributeBag
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\View</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>ComponentAttributeBag</span> {<a class=sf-dump-ref>#478</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: []
+    </samp>}
+    #<span class=sf-dump-protected title=\"Protected property\">contents</span>: \"\"\"
+      <span class=sf-dump-str title=\"1007 characters\">&lt;div wire:snapshot=&quot;{&amp;quot;data&amp;quot;:{&amp;quot;shownTransportForm&amp;quot;:false},&amp;quot;memo&amp;quot;:{&amp;quot;id&amp;quot;:&amp;quot;qFdnUoVzZfbo0c2BU37R&amp;quot;,&amp;quot;name&amp;quot;:&amp;quot;transport.manage-transport&amp;quot;,&amp;quot;path&amp;quot;:&amp;quot;transportation&amp;quot;,&amp;quot;method&amp;quot;:&amp;quot;GET&amp;quot;,&amp;quot;children&amp;quot;:[],&amp;quot;errors&amp;quot;:[],&amp;quot;locale&amp;quot;:&amp;quot;en&amp;quot;},&amp;quot;checksum&amp;quot;:&amp;quot;159cd4f3c52cdab1ef6fa5bbc7c1ab31ac292794c0a64112507a5e12aeb03588&amp;quot;}&quot; wire:effects=&quot;[]&quot; wire:id=&quot;qFdnUoVzZfbo0c2BU37R&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">    &lt;div class=&quot;card&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-header d-flex justify-content-between&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">            &lt;h5&gt;&#3592;&#3633;&#3604;&#3585;&#3634;&#3619;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;&lt;/h5&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">            &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot; wire:click=&#039;onClickCreateTransport&#039;&gt;&#3626;&#3619;&#3657;&#3634;&#3591;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;&#3651;&#3627;&#3617;&#3656;&lt;/button&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-body&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">            &#3605;&#3634;&#3619;&#3634;&#3591;&#3585;&#3634;&#3619;&#3586;&#3609;&#3626;&#3656;&#3591;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;div class=&quot;card-footer d-flex justify-content-center&quot;&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">        &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">    &lt;/div&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\"><span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">    &lt;!--[if BLOCK]&gt;&lt;![endif]--&gt; &lt;!--[if ENDBLOCK]&gt;&lt;![endif]--&gt;<span class=\"sf-dump-default sf-dump-ns\">\\n</span></span>
+      <span class=sf-dump-str title=\"1007 characters\">&lt;/div&gt;</span>
+      \"\"\"
+  </samp>}
+</samp>]
+</pre><script>Sfdump(\"sf-dump-302391331\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":597048,"exception":"[object] (Spatie\\LaravelIgnition\\Exceptions\\ViewException(code: 0): Route [manage-vehicle] not defined. at /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:467)
+[stacktrace]
+#0 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(810): Illuminate\\Routing\\UrlGenerator->route('manage-vehicle', Array, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/resources/views/components/layouts/app.blade.php(90): route('manage-vehicle')
+#2 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Applications/X...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#10 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#11 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(104): Illuminate\\View\\View->render()
+#12 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/storage/framework/views/4943bc92ebba41e8b0e508149542e0ad.blade.php(16): Illuminate\\View\\Factory->renderComponent()
+#13 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/Applications/X...')
+#14 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#15 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Applications/X...', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Applications/X...', Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#21 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#22 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(320): Illuminate\\View\\View->render()
+#23 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(353): Illuminate\\View\\Compilers\\BladeCompiler::render('    <?php $layo...', Array)
+#24 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportPageComponents/SupportPageComponents.php(150): Illuminate\\Support\\Facades\\Facade::__callStatic('render', Array)
+#25 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportPageComponents/HandlesPageComponents.php(24): Livewire\\Features\\SupportPageComponents\\SupportPageComponents::renderContentsIntoLayout('<div wire:snaps...', Object(Livewire\\Features\\SupportPageComponents\\PageComponentConfig))
+#26 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): Livewire\\Component->__invoke()
+#27 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Livewire\\Transport\\ManageTransport), '__invoke')
+#28 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#29 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Routing\\Route->run()
+#30 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#39 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#47 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#48 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#49 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#50 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#67 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#68 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#69 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#70 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#71 {main}
+
+[previous exception] [object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [manage-vehicle] not defined. at /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:467)
+[stacktrace]
+#0 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(810): Illuminate\\Routing\\UrlGenerator->route('manage-vehicle', Array, true)
+#1 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/storage/framework/views/5176f6a8352ce6ad3bf6d7e9dfd14272.php(89): route('manage-vehicle')
+#2 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Applications/X...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#10 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#11 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesComponents.php(104): Illuminate\\View\\View->render()
+#12 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/storage/framework/views/e753509c214d43951bfc27a7b7aff893.php(17): Illuminate\\View\\Factory->renderComponent()
+#13 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(124): require('/Applications/X...')
+#14 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(125): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#15 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('/Applications/X...', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(22): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/Applications/X...', Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(70): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->evaluatePath('/Applications/X...', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Mechanisms/ExtendBlade/ExtendedCompilerEngine.php(10): Illuminate\\View\\Engines\\CompilerEngine->get('/Applications/X...', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(195): Livewire\\Mechanisms\\ExtendBlade\\ExtendedCompilerEngine->get('/Applications/X...', Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(178): Illuminate\\View\\View->getContents()
+#21 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/View.php(147): Illuminate\\View\\View->renderContents()
+#22 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Compilers/BladeCompiler.php(320): Illuminate\\View\\View->render()
+#23 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(353): Illuminate\\View\\Compilers\\BladeCompiler::render('    <?php $layo...', Array)
+#24 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportPageComponents/SupportPageComponents.php(150): Illuminate\\Support\\Facades\\Facade::__callStatic('render', Array)
+#25 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportPageComponents/HandlesPageComponents.php(24): Livewire\\Features\\SupportPageComponents\\SupportPageComponents::renderContentsIntoLayout('<div wire:snaps...', Object(Livewire\\Features\\SupportPageComponents\\PageComponentConfig))
+#26 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(46): Livewire\\Component->__invoke()
+#27 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Livewire\\Transport\\ManageTransport), '__invoke')
+#28 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#29 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(798): Illuminate\\Routing\\Route->run()
+#30 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#39 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#47 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#48 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Routing/Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#49 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#50 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#61 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#62 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#63 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#64 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#67 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#68 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#69 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#70 /Applications/XAMPP/xamppfiles/htdocs/post_logistics/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#71 {main}
+"} 

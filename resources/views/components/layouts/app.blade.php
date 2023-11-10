@@ -33,14 +33,14 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-icon">
+                    <i class="far fa-paper-plane"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">Post Logsitics</div>
             </a>
 
             <!-- Divider -->
@@ -85,11 +85,27 @@
                 </a>
             </li>
 
-            <!-- Nav Item - About -->
-            <li class="nav-item {{ Nav::isRoute('about') }}">
-                <a class="nav-link" href="{{ route('about') }}">
-                    <i class="fas fa-fw fa-hands-helping"></i>
-                    <span>{{ __('About') }}</span>
+            <!-- Nav Item - Vehicle Management -->
+            <li class="nav-item {{ Nav::isRoute('manage-vehicle') }}">
+                <a class="nav-link" href={{ route('manage-vehicle') }} wire:navigate>
+                    <i class="fas fa-shuttle-van"></i>
+                    <span>{{ __('จัดการยานพาหนะ') }}</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Transport Management -->
+            <li class="nav-item {{ Nav::isRoute('manage-transport') }}">
+                <a class="nav-link" href={{ route('manage-transport') }} wire:navigate>
+                    <i class="fas fa-truck"></i>
+                    <span>{{ __('จัดการการขนส่ง') }}</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Transport Management -->
+            <li class="nav-item {{ Nav::isRoute('manage-employee') }}">
+                <a class="nav-link" href={{ route('manage-employee') }} wire:navigate>
+                    <i class="fas fa-user"></i>
+                    <span>{{ __('จัดการพนักงาน') }}</span>
                 </a>
             </li>
 
@@ -125,7 +141,7 @@
                             <input type="text" class="form-control bg-light border-0 small"
                                 placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn btn-danger" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -319,7 +335,7 @@
                 <!-- Begin Page Content -->
                 <div class="container">
                     @if (session('status'))
-                        <div class="alert alert-{{session('status.type')}}">
+                        <div class="alert alert-{{ session('status.type') }}">
                             {{ session('status.message') }}
                         </div>
                     @endif
