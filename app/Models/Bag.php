@@ -29,6 +29,16 @@ class Bag extends Model
     }
 
     /**
+     * Get the transport that owns the Bag
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function transport(): BelongsTo
+    {
+        return $this->belongsTo(Transportation::class, 'transport_id', 'transportation_id');
+    }
+
+    /**
      * Get the postalCode that owns the bag
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

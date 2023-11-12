@@ -2,19 +2,19 @@
 
 namespace App\Livewire\Transport;
 
+use App\Models\Transportation;
 use Livewire\Component;
 
 class ManageTransport extends Component
 {
+    public $transportations;
+    public $shownNewTransportation = false;
+    public $shownBagTransport = false;
 
-    public $shownTransportForm = false;
-
-    public function onClickCreateTransport()
+    public function mount()
     {
-        //show input form
-        $this->shownTransportForm = !$this->shownTransportForm;
+        $this->transportations = Transportation::all();
     }
-
 
     public function render()
     {
