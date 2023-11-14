@@ -101,7 +101,23 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Transport Management -->
+            <!-- Nav Item - Distribution Management -->
+            <li class="nav-item {{ Nav::isRoute('manage-distribution') }}">
+                <a class="nav-link" href={{ route('manage-distribution') }} wire:navigate>
+                    <i class="fas fa-boxes"></i>
+                    <span>{{ __('เตรียมนำจ่ายพัสดุ') }}</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Delivery Management -->
+            <li class="nav-item {{ Nav::isRoute('manage-distribution') }}">
+                <a class="nav-link" href={{ route('manage-distribution') }} wire:navigate>
+                    <i class="fas fa-motorcycle"></i>
+                    <span>{{ __('เตรียมนำจ่ายพัสดุ') }}</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Employee Management -->
             <li class="nav-item {{ Nav::isRoute('manage-employee') }}">
                 <a class="nav-link" href={{ route('manage-employee') }} wire:navigate>
                     <i class="fas fa-user"></i>

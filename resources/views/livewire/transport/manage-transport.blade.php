@@ -2,7 +2,8 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between">
             <h5>จัดการการขนส่ง</h5>
-            <button type="button" class="btn btn-success" wire:click="$toggle('shownNewTransportation')">สร้างการขนส่งใหม่</button>
+            <button type="button" class="btn btn-success"
+                wire:click="$toggle('shownNewTransportation')">สร้างการขนส่งใหม่</button>
         </div>
 
         <div class="card-body">
@@ -26,34 +27,48 @@
                         </thead>
                         <tbody>
                             @foreach ($transportations as $transportation)
-                            <tr>
-                                <td>{{$loop->iteration}}</td>
-                                <td>{{$transportation->transportation_id}}</td>
-                                <td>{{$transportation->plate_number}}</td>
-                                <td>{{$transportation->vehicle->vehicle_type}}</td>
-                                <td>{{$transportation->driver->fullname}}</td>
-                                <td>{{$transportation->sourcePostal->district}}</td>
-                                <td>{{$transportation->start_driving}}</td>
-                                <td>{{$transportation->destinationPostal->district}}</td>
-                                <td>{{$transportation->end_driving}}</td>
-                                <td>
-                                    <div class="d-flex content-justify-center">
-                                        <button class="btn btn-sm btn-warning mr-1" wire:click="$dispatchTo('transport.bag-transport', 'show-available-bags', { transportation: {{ $transportation->transportation_id }} })">เพิ่มถุงไปรษณีย์</button>
-                                        <button class="btn btn-sm btn-success" wire:click="onClickFinishDriving('{{$transportation->transportation_id}}')" >บันทึกเวลาถึงปลายทาง</button>
-                                    </div>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $transportation->transportation_id }}</td>
+                                    <td>{{ $transportation->plate_number }}</td>
+                                    <td>{{ $transportation->vehicle->vehicle_type }}</td>
+                                    <td>{{ $transportation->driver->fullname }}</td>
+                                    <td>{{ $transportation->sourcePostal->district }}</td>
+                                    <td>{{ $transportation->start_driving }}</td>
+                                    <td>{{ $transportation->destinationPostal->district }}</td>
+                                    <td>{{ $transportation->finish_driving }}</td>
+                                    <td>
+                                        <div class="d-flex content-justify-center">
+                                            <button class="btn btn-sm btn-warning mr-1"
+                                                wire:click="$dispatchTo('transport.bag-transport', 'show-available-bags', { transportation: '{{ $transportation->transportation_id }}' })">เพิ่มถุงไปรษณีย์</button>
+                                            <button class="btn btn-sm btn-info mr-1"
+                                                wire:click="$dispatchTo('transport.bag-in-transport', 'show-bags', { transportation: '{{ $transportation->transportation_id }}' })">รายละเอียด</button>
+                                            <button class="btn btn-sm btn-success"
+                                                wire:confirm="ต้องการบันทึกข้อมูลการขนส่งหรือไม่?"
+                                                wire:click="onClickDriving('{{ $transportation->transportation_id }}')">
+                                                @if (is_null($transportation->start_driving))
+                                                    บันทึกเวลาเริ่มเดินทาง
+                                                @else
+                                                    บันทึกเวลาถึงปลายทาง
+                                                @endif
+                                            </button>
+
+                                        </div>
+                                    </td>
+                                </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
 
-        {{-- when click show available bags --}}
-        <livewire:transport.bag-transport>
+            {{-- when click show untransported bags --}}
+            <livewire:transport.bag-transport>
+
+                {{-- when click show transported bags --}}
+                <livewire:transport.bag-in-transport>
 
         </div>
-
 
         <div class="card-footer d-flex justify-content-center">
         </div>

@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Transportation extends Model
 {
@@ -15,7 +16,7 @@ class Transportation extends Model
     protected $primaryKey = 'transportation_id';
     public $incrementing = false;
     public $timestamps = false;
-    protected $fillable = ['transportation_id', 'plate_number', 'driver_id', 'from_post_office_code', 'to_post_office_code', 'start_driving', 'end_driving'];
+    protected $fillable = ['transportation_id', 'plate_number', 'driver_id', 'from_post_office_code', 'to_post_office_code', 'start_driving', 'finish_driving'];
 
     /**
      * Get the sourcePostal that owns the Transportation
@@ -55,6 +56,16 @@ class Transportation extends Model
     public function vehicle(): BelongsTo
     {
         return $this->belongsTo(Vehicle::class,'plate_number', 'plate_number');
+    }
+
+    /**
+     * Get all of the bags for the Transportation
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function bags(): HasMany
+    {
+        return $this->hasMany(Bag::class, 'transport_id', 'transportation_id');
     }
 
     public function scopeGenerateTransportId($q, $srcPostal, $dstPostal)
