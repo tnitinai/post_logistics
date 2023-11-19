@@ -22,11 +22,16 @@ class Package extends Model
     protected $keyType = 'string';
     protected $with = ['statuses'];
     protected $fillable = [
-        'tracking_number', 'sender_id', 'from_postal_code', 'weight', 'price', 'receiver_name', 'receiver_address', 'receiver_telephone', 'to_postal_code', 'current_status','invoice_id', 'bag_id'
+        'tracking_number', 'sender_id', 'from_postal_code', 'weight', 'price', 'receiver_name', 'receiver_address', 'receiver_telephone', 'to_postal_code', 'current_status','invoice_id', 'bag_id', 'postman_id'
     ];
 
     public function getSourcePostalNameAttribute()
     {
+    }
+
+    public function getLastStatusAttribute()
+    {
+        return Status::find($this->current_status)->name;
     }
 
     /**
@@ -57,7 +62,8 @@ class Package extends Model
     public function statuses(): BelongsToMany
     {
         return $this->belongsToMany(Status::class, null, 'tracking_id', 'status_id', 'tracking_number')
-            ->using(PackageMovement::class);
+            ->using(PackageMovement::class)
+            ->withPivot(['created_at', 'created_by']);
         //return $this->belongsToMany(Status::class, 'Package_Status', 'tracking_id', 'status_id', 'tracking_number')
         //->as('package_movement')
         //->withPivot('status_id')
@@ -72,6 +78,16 @@ class Package extends Model
     public function movements(): HasMany
     {
         return $this->hasMany(PackageMovement::class, 'tracking_id', 'tracking_number');
+    }
+
+    /**
+     * Get the postman that owns the Package
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function postman(): BelongsTo
+    {
+        return $this->belongsTo(User::class,'postman_id','id');
     }
 
     public function scopeCalculateServiceFee($q, $weight)

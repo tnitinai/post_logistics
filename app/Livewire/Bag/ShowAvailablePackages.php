@@ -8,6 +8,7 @@ use App\Models\Status;
 use Livewire\Component;
 use Livewire\Attributes\On;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ShowAvailablePackages extends Component
@@ -48,7 +49,7 @@ class ShowAvailablePackages extends Component
                 $package->update(['bag_id' => $bag->bag_id, 'current_status' => 2]);
 
                 // add status history
-                $package->movements()->create(['status_id'=>2]);
+                $package->movements()->create(['status_id'=>2, 'created_by' => Auth::user()->id]);
             }
         });
 

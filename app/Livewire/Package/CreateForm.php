@@ -8,11 +8,14 @@ use Livewire\Component;
 use App\Models\Sender;
 use App\Models\Package;
 use App\Models\PostalCode;
+use App\Traits\MovementTrait;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
 class CreateForm extends Component
 {
+    use MovementTrait;
+
     public $package = [];
     public $packages = [];
     public $senders;
@@ -59,9 +62,11 @@ class CreateForm extends Component
                 $package['sender_id'] = $this->sender['sender_id'];
                 $package['invoice_id'] = $invoice_id;
                 $package['from_postal_code'] = $this->sender['from_postal_code'];
+                $package['current_status'] = 1;
 
                 // save to database
-                Package::create($package);
+                $newPackage = Package::create($package);
+                $this->appendMovementLog($newPackage, 1);
             }
 
             $result = $invoice_id;
