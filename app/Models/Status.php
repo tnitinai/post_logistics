@@ -30,6 +30,7 @@ class Status extends Model
     {
         return $this->belongsToMany(Package::class, null, 'status_id', 'tracking_id', 'status_id')
             ->using(PackageMovement::class)
+            ->withPivot(['created_at', 'created_by', 'detail', 'src_postal', 'dst_postal'])
             // ->as('package_movement')
             // ->withPivot('status_id')
             // ->withTimestamps()

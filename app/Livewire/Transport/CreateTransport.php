@@ -7,9 +7,12 @@ use App\Models\Transportation;
 use App\Models\User;
 use App\Models\Vehicle;
 use Livewire\Component;
+use App\Traits\MovementTrait;
 
 class CreateTransport extends Component
 {
+    use MovementTrait;
+
     public $transport;
     public $postalCodes;
     public $vehicleTypes;

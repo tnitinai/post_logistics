@@ -7,7 +7,9 @@
             <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
                     <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <img style="max-height: 100vh" src="{{asset('img/postman1.jpeg')}}" />
+                        </div>
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
@@ -40,11 +42,24 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="role_id" placeholder="{{ __('หน้าที่') }}" value="{{ old('role_id') }}" required>
+                                        {{-- <input type="text" class="form-control form-control-user" name="role_id" placeholder="{{ __('หน้าที่') }}" value="{{ old('role_id') }}" required> --}}
+                                        <label for="role_id" class="form-label">หน้าที่</label>
+                                        <select class="form-control" id="role_id" name='role_id' required>
+                                            <option>-------------</option>
+                                            @foreach ($roles as $role)
+                                                <option value={{ $role->role_id }}>{{ $role->name }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="post_office_id" placeholder="{{ __('สถานที่ทำงาน') }}" value="{{ old('post_office_id') }}" required>
+                                        <label for="post_office_id" class="form-label">สถานที่ทำงาน</label>
+                                        <select class="form-control" id="post_office_id" name='post_office_id' required>
+                                            <option>-------------</option>
+                                            @foreach ($postalCodes as $postalCode)
+                                                <option value={{ $postalCode->postal_code }}>{{ $postalCode->postal_location }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
 
                                     <div class="form-group">

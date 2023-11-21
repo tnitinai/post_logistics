@@ -8,6 +8,7 @@ use Livewire\Component;
 
 class CreateBag extends Component
 {
+
     public $postalCodes = [];
     public $postal = [];
     public Bag $bag;

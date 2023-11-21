@@ -20,7 +20,7 @@ class Package extends Model
     public $incrementing = false;
     public $timestamps = false;
     protected $keyType = 'string';
-    protected $with = ['statuses'];
+    // protected $with = ['statuses'];
     protected $fillable = [
         'tracking_number', 'sender_id', 'from_postal_code', 'weight', 'price', 'receiver_name', 'receiver_address', 'receiver_telephone', 'to_postal_code', 'current_status','invoice_id', 'bag_id', 'postman_id'
     ];
@@ -32,6 +32,16 @@ class Package extends Model
     public function getLastStatusAttribute()
     {
         return Status::find($this->current_status)->name;
+    }
+
+    /**
+     * Get the bag that owns the Package
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function bag(): BelongsTo
+    {
+        return $this->belongsTo(Bag::class,'bag_id', 'bag_id');
     }
 
     /**
@@ -63,7 +73,7 @@ class Package extends Model
     {
         return $this->belongsToMany(Status::class, null, 'tracking_id', 'status_id', 'tracking_number')
             ->using(PackageMovement::class)
-            ->withPivot(['created_at', 'created_by']);
+            ->withPivot(['created_at', 'created_by', 'detail', 'src_postal', 'dst_postal']);
         //return $this->belongsToMany(Status::class, 'Package_Status', 'tracking_id', 'status_id', 'tracking_number')
         //->as('package_movement')
         //->withPivot('status_id')

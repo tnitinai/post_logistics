@@ -14,6 +14,6 @@ class PackageStatus extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'tracking_id','status_id', 'detail','created_by',
+        'tracking_id','status_id', 'src_postal','dst_postal','detail','created_by',
     ];
 }

@@ -66,7 +66,7 @@ class CreateForm extends Component
 
                 // save to database
                 $newPackage = Package::create($package);
-                $this->appendMovementLog($newPackage, 1);
+                $this->appendMovementLog($newPackage, 1, $invoice_id);
             }
 
             $result = $invoice_id;

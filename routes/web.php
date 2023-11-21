@@ -25,27 +25,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', [CreateForm::class, '__invoke'])->name('package');
+    Route::get('/package', [CreateForm::class, '__invoke'])->name('package');
+    Route::get('/receipt/{invoice_id}', [ShowReceipt::class, '__invoke'])->name('show-receipt');
+    Route::get('/bag', [ShowBag::class, '__invoke'])->name('show-bag');
+    Route::get('/bag/manage', [ManageBag::class, '__invoke'])->name('manage-bag');
+    Route::get('/vehicle', [IndexVehicle::class, '__invoke'])->name('manage-vehicle');
+    Route::get('/transportation', [ManageTransport::class, '__invoke'])->name('manage-transport');
+    Route::get('/distribution', [IndexDistribution::class, '__invoke'])->name('manage-distribution');
+    Route::get('/delivery', [IndexDelivery::class, '__invoke'])->name('manage-delivery');
+    Route::get('/tracking/{tracking}', [ShowPackageInfo::class, '__invoke'])->name('show-tracking');
+    Route::get('/employee', [IndexEmployee::class, '__invoke'])->name('manage-employee');
 
-Route::get('/profile', 'ProfileController@index')->name('profile');
-Route::put('/profile', 'ProfileController@update')->name('profile.update');
-Route::get('/package', [CreateForm::class, '__invoke'])->name('package');
-Route::get('/receipt/{invoice_id}', [ShowReceipt::class, '__invoke'])->name('show-receipt');
-Route::get('/bag', [ShowBag::class, '__invoke'])->name('show-bag');
-Route::get('/bag/manage', [ManageBag::class, '__invoke'])->name('manage-bag');
-Route::get('/vehicle', [IndexVehicle::class, '__invoke'])->name('manage-vehicle');
-Route::get('/transportation', [ManageTransport::class, '__invoke'])->name('manage-transport');
-Route::get('/distribution', [IndexDistribution::class, '__invoke'])->name('manage-distribution');
-Route::get('/delivery', [IndexDelivery::class, '__invoke'])->name('manage-delivery');
-Route::get('/tracking/{tracking}', [ShowPackageInfo::class, '__invoke'])->name('show-tracking');
-Route::get('/employee', [IndexEmployee::class, '__invoke'])->name('manage-employee');
+    Route::get('/about', function () {
+        return view('about');
+    })->name('about');
+});
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');

@@ -10,9 +10,12 @@ use Livewire\Attributes\On;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Traits\MovementTrait;
 
 class ShowAvailablePackages extends Component
 {
+    use MovementTrait;
+
     public $packages = [];
     public $selectedPackages = [];
     public $bagTag;
@@ -48,8 +51,8 @@ class ShowAvailablePackages extends Component
                 //update bag's packages
                 $package->update(['bag_id' => $bag->bag_id, 'current_status' => 2]);
 
-                // add status history
-                $package->movements()->create(['status_id'=>2, 'created_by' => Auth::user()->id]);
+                // add package movement
+                $this->appendMovementLog($package, 2, $bag->bag_id);
             }
         });
 

@@ -17,7 +17,7 @@
                     @foreach ($packages as $package)
                         <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$package->bag_id}}</td>
+                            <td>{{$package->tracking_number}}</td>
                             <td>{{$package->destinationPostalCode->district}}</td>
                         </tr>
                     @endforeach
