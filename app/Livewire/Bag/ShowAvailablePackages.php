@@ -19,12 +19,14 @@ class ShowAvailablePackages extends Component
     public $packages = [];
     public $selectedPackages = [];
     public $bagTag;
+    public $source;
     public $destination;
 
     #[On('bag-created')]
     public function showPackages($bag)
     {
         $this->bagTag = $bag['bag_id'];
+        $this->source = $bag['from_postal_code'];
         $this->destination = $bag['to_postal_code'];
 
         $this->packages = Package::where('from_postal_code', $bag['from_postal_code'])
@@ -43,7 +45,7 @@ class ShowAvailablePackages extends Component
     {
         DB::transaction(function(){
             //create Bag
-            $bag = Bag::create(['bag_id' => $this->bagTag, 'to_postal_code' => $this->destination]);
+            $bag = Bag::create(['bag_id' => $this->bagTag,'from_postal_code' => $this->source, 'to_postal_code' => $this->destination]);
 
             foreach ($this->selectedPackages as  $package_id) {
                 $package = Package::find($package_id);

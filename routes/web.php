@@ -4,6 +4,7 @@ use App\Livewire\Bag\ManageBag;
 use App\Livewire\Package\CreateForm;
 use App\Livewire\Invoice\ShowReceipt;
 use App\Livewire\Bag\ShowBag;
+use App\Livewire\Package\ShowPackage;
 use App\Livewire\Delivery\IndexDelivery;
 use App\Livewire\Distribution\IndexDistribution;
 use App\Livewire\Employee\IndexEmployee;
@@ -34,6 +35,7 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [CreateForm::class, '__invoke'])->name('package');
     Route::get('/package', [CreateForm::class, '__invoke'])->name('package');
+    Route::get('/package/all', [ShowPackage::class, '__invoke'])->name('package.all');
     Route::get('/receipt/{invoice_id}', [ShowReceipt::class, '__invoke'])->name('show-receipt');
     Route::get('/bag', [ShowBag::class, '__invoke'])->name('show-bag');
     Route::get('/bag/manage', [ManageBag::class, '__invoke'])->name('manage-bag');

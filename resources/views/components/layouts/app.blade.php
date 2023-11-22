@@ -69,6 +69,14 @@
                 </a>
             </li>
 
+            <!-- Nav Item - Package Display -->
+            <li class="nav-item {{ Nav::isRoute('package.all') }}">
+                <a class="nav-link" href={{ route('package.all') }} wire:navigate>
+                    <i class="fas fa-box"></i>
+                    <span>{{ __('ข้อมูลพัสดุ') }}</span>
+                </a>
+            </li>
+
             <!-- Nav Item - Create Bag -->
             <li class="nav-item {{ Nav::isRoute('show-bag') }}">
                 <a class="nav-link" href={{ route('show-bag') }} wire:navigate>

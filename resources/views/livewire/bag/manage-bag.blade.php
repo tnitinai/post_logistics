@@ -19,7 +19,7 @@
                         @foreach ($bags as $bag)
                         <tr>
                             <td>{{$bag->bag_id}}</td>
-                            <td>{{$bag->postalCode->district}}</td>
+                            <td>{{$bag->postalCode->postal_location}}</td>
                             <td>{{$bag->packages()->count()}}</td>
                             <td class="d-flex justify-content-center">
                                 <button type="button" class="btn btn-sm btn-info" wire:click="onClickShowPackages('{{$bag->bag_id}}')">รายการพัสดุ</button>

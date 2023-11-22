@@ -18,7 +18,7 @@
                         <tr>
                             <td>{{$loop->iteration}}</td>
                             <td>{{$package->tracking_number}}</td>
-                            <td>{{$package->destinationPostalCode->district}}</td>
+                            <td>{{$package->destinationPostalCode->postal_location}}</td>
                         </tr>
                     @endforeach
                 </tbody>

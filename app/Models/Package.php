@@ -91,6 +91,16 @@ class Package extends Model
     }
 
     /**
+     * Get the invoice that owns the Package
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function invoice(): BelongsTo
+    {
+        return $this->belongsTo(Invoice::class,'invoice_id','invoice_id');
+    }
+
+    /**
      * Get the postman that owns the Package
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

@@ -16,7 +16,7 @@ class Bag extends Model
     protected $primaryKey = 'bag_id';
     public $incrementing = false;
     public $timestamps = false;
-    protected $fillable = ['bag_id', 'to_postal_code', 'transport_id'];
+    protected $fillable = ['bag_id', 'from_postal_code', 'to_postal_code', 'transport_id'];
 
     /**
      * Get all of the packages for the bag

@@ -13,10 +13,11 @@ trait MovementTrait
         $package->movements()->create(['status_id' => $status_id, 'created_by' => Auth::user()->id, 'detail' => $detail]);
     }
 
-    public function recordMovementWhenReachDestination(Transportation $trans) : void {
-        $trans->bags()->each(function(Bag $bag) use($trans) {
-            $bag->packages()->each(function(Package $package) use($trans) {
-                $this->appendMovementLog($package, 4, $trans->transportation_id);
+    public function recordMovementWhenReachDestination(Transportation $trans, int $status) : void {
+        $trans->bags()->each(function(Bag $bag) use($trans, $status) {
+            $bag->packages()->each(function(Package $package) use($trans, $status) {
+                $package->update(['current_status' => $status]);
+                $this->appendMovementLog($package, $status, $trans->transportation_id);
             });
         });
     }

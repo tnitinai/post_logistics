@@ -39,20 +39,25 @@
                                     <td>{{ $transportation->finish_driving }}</td>
                                     <td>
                                         <div class="d-flex content-justify-center">
-                                            <button class="btn btn-sm btn-warning mr-1"
-                                                wire:click="$dispatchTo('transport.bag-transport', 'show-available-bags', { transportation: '{{ $transportation->transportation_id }}' })">เพิ่มถุงไปรษณีย์</button>
+                                            @if (is_null($transportation->start_driving))
+                                                <button class="btn btn-sm btn-warning mr-1"
+                                                    wire:click="$dispatchTo('transport.bag-transport', 'show-available-bags', { transportation: '{{ $transportation->transportation_id }}' })">เพิ่มถุงไปรษณีย์</button>
+                                            @endif
                                             <button class="btn btn-sm btn-info mr-1"
                                                 wire:click="$dispatchTo('transport.bag-in-transport', 'show-bags', { transportation: '{{ $transportation->transportation_id }}' })">รายละเอียด</button>
-                                            <button class="btn btn-sm btn-success"
-                                                wire:confirm="ต้องการบันทึกข้อมูลการขนส่งหรือไม่?"
-                                                wire:click="onClickDriving('{{ $transportation->transportation_id }}')">
-                                                @if (is_null($transportation->start_driving))
+                                            @if (is_null($transportation->start_driving))
+                                                <button class="btn btn-sm btn-success"
+                                                    wire:confirm="ต้องการบันทึกข้อมูลการขนส่งหรือไม่?"
+                                                    wire:click="onClickDriving('{{ $transportation->transportation_id }}')">
                                                     บันทึกเวลาเริ่มเดินทาง
-                                                @else
+                                                </button>
+                                            @elseif(is_null($transportation->finish_driving))
+                                                <button class="btn btn-sm btn-success"
+                                                    wire:confirm="ต้องการบันทึกข้อมูลการขนส่งหรือไม่?"
+                                                    wire:click="onClickDriving('{{ $transportation->transportation_id }}')">
                                                     บันทึกเวลาถึงปลายทาง
-                                                @endif
-                                            </button>
-
+                                                </button>
+                                            @endif
                                         </div>
                                     </td>
                                 </tr>
