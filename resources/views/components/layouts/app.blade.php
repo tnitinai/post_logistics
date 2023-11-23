@@ -109,6 +109,14 @@
                 </a>
             </li>
 
+            <!-- Nav Item - Unpackaing Management -->
+            <li class="nav-item {{ Nav::isRoute('unpack-package') }}">
+                <a class="nav-link" href={{ route('unpack-package') }} wire:navigate>
+                    <i class="fas fa-dolly"></i>
+                    <span>{{ __('คัดแยกถุงไปรษณีย์') }}</span>
+                </a>
+            </li>
+
             <!-- Nav Item - Distribution Management -->
             <li class="nav-item {{ Nav::isRoute('manage-distribution') }}">
                 <a class="nav-link" href={{ route('manage-distribution') }} wire:navigate>

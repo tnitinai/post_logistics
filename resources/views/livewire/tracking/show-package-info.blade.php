@@ -37,7 +37,22 @@
                                 @case(4)
                                     หมายเลขการขนส่ง {{$movement->pivot->detail}}
                                     @break
+                                @case(5)
+                                    หมายเลขถุง {{$movement->pivot->detail}}
+                                    @break
                                 @case(6)
+                                    หมายเลขถุง {{$movement->pivot->detail}}
+                                    @break
+                                @case(8)
+                                    หมายเลขการขนส่ง {{$movement->pivot->detail}}
+                                    @break
+                                @case(9)
+                                    หมายเลขการขนส่ง {{$movement->pivot->detail}}
+                                    @break
+                                @case(11)
+                                    ผู้นำจ่าย {{$movement->pivot->detail}}
+                                    @break
+                                @case(15)
                                     หมายเลขถุง {{$movement->pivot->detail}}
                                     @break
                                 @default

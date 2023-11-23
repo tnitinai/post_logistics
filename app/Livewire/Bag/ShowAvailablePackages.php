@@ -29,8 +29,15 @@ class ShowAvailablePackages extends Component
         $this->source = $bag['from_postal_code'];
         $this->destination = $bag['to_postal_code'];
 
-        $this->packages = Package::where('from_postal_code', $bag['from_postal_code'])
+        // package ที่เพิ่งรับเข้าระบบ
+        $initPackages = Package::where('from_postal_code', $bag['from_postal_code'])
             ->where('current_status', 1)->get();
+
+        // package ที่เกิดจากการเปิดถุงไปรษณีย์
+        $unpackedPackages = Package::where('to_postal_code', $bag['to_postal_code'])
+            ->where('current_status', 5)->get();
+
+        $this->packages = $initPackages->merge($unpackedPackages);
 
         // $this->selectedPackages = [$this->packages->first()->tracking_number];
         /*
@@ -48,13 +55,17 @@ class ShowAvailablePackages extends Component
             $bag = Bag::create(['bag_id' => $this->bagTag,'from_postal_code' => $this->source, 'to_postal_code' => $this->destination]);
 
             foreach ($this->selectedPackages as  $package_id) {
+                //update bag id to packages
                 $package = Package::find($package_id);
 
-                //update bag's packages
-                $package->update(['bag_id' => $bag->bag_id, 'current_status' => 2]);
+                $package->update(['bag_id' => $bag->bag_id]);
 
-                // add package movement
-                $this->appendMovementLog($package, 2, $bag->bag_id);
+                //ถ้า package มาจากการเปิดถุง ให้อัพเดท status = 15
+                if($package->current_status == 5) {
+                    $this->appendMovementLog($package, 15, $bag->bag_id);
+                }else {
+                    $this->appendMovementLog($package, 2, $bag->bag_id);
+                }
             }
         });
 

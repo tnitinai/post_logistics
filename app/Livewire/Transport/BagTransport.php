@@ -32,39 +32,49 @@ class BagTransport extends Component
 
 
         // get bag id of each package
-        $bagsIdInDestinationPackage = Package::where('current_status', 4)->whereHas('statuses', function (Builder $q) {
-            $q->where('Package_Status.status_id', '4');
-        })->select('bag_id')->get()->toArray();
+        $bagsIdInDestinationPackage = Package::where('current_status', 4)->select('bag_id')->get()->toArray();
 
         // find bags which package has status 4
         $bagsInDestinationPackage = Bag::whereIn('bag_id', $bagsIdInDestinationPackage)->get();
         // dd($bagsInDestinationPackage);
         $this->availableBags = $this->availableBags->merge($bagsInDestinationPackage);
-
-
-        //Transportation::where('transportation_id', $transportation)->first()->bags;
     }
 
     public function saveBags()
     {
-        // get bag id of each package
-        $bagsIdInDestinationPackage = Package::where('current_status', 4)->whereHas('statuses', function (Builder $q) {
-            $q->where('Package_Status.status_id', '4');
-        })->select('bag_id')->get()->toArray();
+        // get bag id where status = 4 in each package
+        $bagsIdInDestinationPackage = Package::whereIn('current_status', [4, 15])->select('bag_id')->get()->toArray();
 
         $tranport = Transportation::where('transportation_id', $this->transportation)->first();
+
         foreach ($this->selectedBags as $bag_id) {
-            //check if packages' bag in status 4
-            if (in_array($bag_id, array_column($bagsIdInDestinationPackage, 'bag_id'))) {
-                // update package status to 5 and movement status to 5
+
+            $latestStatus = Bag::where('bag_id', $bag_id)->first()->packages->random()->current_status;
+
+            // ถ้าสถานะของพัสดุล่าสุดคือ พัสดุถึงศูนย์ฯ (status =4) ให้ปรับสถานะเป็น อยู่ระหว่างการขนส่งไปศูนย์ปลายทาง
+            // ถ้าสถานะของพัสดุล่าสุดคือ ใส่พัสดุลงถุง (status =15) ให้ปรับสถานะเป็น อยู่ระหว่างการขนส่งไปที่ทำการปลายทาง
+            // กรณีอื่นๆ ให้ปรับสถานะเป็น อยู่ระหว่างการขนส่งไปยังศูนย์ไปรษณีย์ต้นทาง
+            if ($latestStatus === 4) {
                 DB::transaction(function () use (&$result, $bag_id, $tranport) {
                     $result = null;
                     //foreach ($this->selectedBags as $bag) {
                     $bagBeAdded = Bag::where('bag_id', $bag_id)->first();
                     $added = $bagBeAdded->transport()->associate($tranport)->save();
                     $bagBeAdded->packages()->each(function (Package $package) use ($tranport) {
-                        $package->update(['current_status'=> 6]);
                         $this->appendMovementLog($package, 6, $tranport->transportation_id);
+                    });
+
+                    $result = $added ? true : false;
+                    //}
+                });
+            } elseif ($latestStatus === 15) {
+                DB::transaction(function () use (&$result, $bag_id, $tranport) {
+                    $result = null;
+                    //foreach ($this->selectedBags as $bag) {
+                    $bagBeAdded = Bag::where('bag_id', $bag_id)->first();
+                    $added = $bagBeAdded->transport()->associate($tranport)->save();
+                    $bagBeAdded->packages()->each(function (Package $package) use ($tranport) {
+                        $this->appendMovementLog($package, 8, $tranport->transportation_id);
                     });
 
                     $result = $added ? true : false;
@@ -78,7 +88,6 @@ class BagTransport extends Component
                     $bagBeAdded = Bag::where('bag_id', $bag_id)->first();
                     $added = $bagBeAdded->transport()->associate($tranport)->save();
                     $bagBeAdded->packages()->each(function (Package $package) use ($tranport) {
-                        $package->update(['current_status'=> 3]);
                         $this->appendMovementLog($package, 3, $tranport->transportation_id);
                     });
 
@@ -86,16 +95,37 @@ class BagTransport extends Component
                     //}
                 });
             }
+            /*
+            }
+
+            if (in_array($bag_id, array_column($bagsIdInDestinationPackage, 'bag_id'))) {
+                DB::transaction(function () use (&$result, $bag_id, $tranport) {
+                    $result = null;
+                    //foreach ($this->selectedBags as $bag) {
+                    $bagBeAdded = Bag::where('bag_id', $bag_id)->first();
+                    $added = $bagBeAdded->transport()->associate($tranport)->save();
+                    $bagBeAdded->packages()->each(function (Package $package) use ($tranport) {
+                        $package->update(['current_status'=> 6]);
+                        $this->appendMovementLog($package, 6, $tranport->transportation_id);
+                    });
+
+                    $result = $added ? true : false;
+                    //}
+                });
+
+            } else {
+
+            }
+            */
             //update packages' bag to status 6
-        }
 
-
-        if ($result) {
-            session()->flash('status', [
-                'type' => 'success',
-                'message' => 'บันทึกข้อมูลการบรรทุกถุงไปรษณีย์ลงยานพาหนะสำเร็จ'
-            ]);
-            $this->redirect('transportation');
+            if ($result) {
+                session()->flash('status', [
+                    'type' => 'success',
+                    'message' => 'บันทึกข้อมูลการบรรทุกถุงไปรษณีย์ลงยานพาหนะสำเร็จ'
+                ]);
+                $this->redirect('transportation');
+            }
         }
     }
 

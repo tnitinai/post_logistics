@@ -7,6 +7,7 @@ use App\Livewire\Bag\ShowBag;
 use App\Livewire\Package\ShowPackage;
 use App\Livewire\Delivery\IndexDelivery;
 use App\Livewire\Distribution\IndexDistribution;
+use App\Livewire\Distribution\UnpackPackage;
 use App\Livewire\Employee\IndexEmployee;
 use App\Livewire\Tracking\ShowPackageInfo;
 use App\Livewire\Transport\ManageTransport;
@@ -42,6 +43,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/vehicle', [IndexVehicle::class, '__invoke'])->name('manage-vehicle');
     Route::get('/transportation', [ManageTransport::class, '__invoke'])->name('manage-transport');
     Route::get('/distribution', [IndexDistribution::class, '__invoke'])->name('manage-distribution');
+    Route::get('/unpack', [UnpackPackage::class, '__invoke'])->name('unpack-package');
     Route::get('/delivery', [IndexDelivery::class, '__invoke'])->name('manage-delivery');
     Route::get('/tracking/{tracking}', [ShowPackageInfo::class, '__invoke'])->name('show-tracking');
     Route::get('/employee', [IndexEmployee::class, '__invoke'])->name('manage-employee');

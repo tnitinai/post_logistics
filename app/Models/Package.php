@@ -22,7 +22,7 @@ class Package extends Model
     protected $keyType = 'string';
     // protected $with = ['statuses'];
     protected $fillable = [
-        'tracking_number', 'sender_id', 'from_postal_code', 'weight', 'price', 'receiver_name', 'receiver_address', 'receiver_telephone', 'to_postal_code', 'current_status','invoice_id', 'bag_id', 'postman_id'
+        'tracking_number', 'sender_id', 'from_postal_code', 'weight', 'price', 'receiver_name', 'receiver_address', 'receiver_telephone', 'to_postal_code', 'current_status','invoice_id', 'bag_id', 'delivery_id'
     ];
 
     public function getSourcePostalNameAttribute()
@@ -73,11 +73,8 @@ class Package extends Model
     {
         return $this->belongsToMany(Status::class, null, 'tracking_id', 'status_id', 'tracking_number')
             ->using(PackageMovement::class)
-            ->withPivot(['created_at', 'created_by', 'detail', 'src_postal', 'dst_postal']);
-        //return $this->belongsToMany(Status::class, 'Package_Status', 'tracking_id', 'status_id', 'tracking_number')
-        //->as('package_movement')
-        //->withPivot('status_id')
-        //->withTimestamps();
+            ->withPivot(['created_at', 'created_by', 'detail', 'src_postal', 'dst_postal'])
+            ->orderBy('created_at');
     }
 
     /**
@@ -107,7 +104,7 @@ class Package extends Model
      */
     public function postman(): BelongsTo
     {
-        return $this->belongsTo(User::class,'postman_id','id');
+        return $this->belongsTo(User::class,'delivery_id','id');
     }
 
     public function scopeCalculateServiceFee($q, $weight)

@@ -9,10 +9,13 @@ use App\Models\Package;
 use App\Models\PostalCode;
 use App\Models\Transportation;
 use App\Models\User;
+use App\Traits\MovementTrait;
 use Livewire\Component;
 
 class IndexDistribution extends Component
 {
+    use MovementTrait;
+
     public $packages;
     public $bags;
     public $transportations;
@@ -26,16 +29,22 @@ class IndexDistribution extends Component
     {
         $this->postalCodes = PostalCode::all();
         $this->postmen = [];
+
+        // packages ที่มีปลายทางเดียวกับต้นทางและตรงกับที่ทำการของ user AND current_status in 1,9
+        $this->packages = Package::where('to_postal_code', $this->post_office)->whereIn('current_status', [1, 9])->get();
+
+        /*
+        // bags ที่มีสถานะ ถึงที่ทำการปลายทาง
         $this->bags = Bag::whereHas('transport', function(Builder $query) {
             $query->whereNotNull('finish_driving');
         })->get();
+        */
     }
 
     public function searchPackages()
     {
-        $this->bags = Bag::whereHas('packages', function(Builder $q) {
-            $q->where('to_postal_code', $this->post_office);
-        })->get();
+        $this->packages = Package::where('to_postal_code', $this->post_office)->whereIn('current_status', [1, 9])->get();
+
     }
 
     public function updatedPostOffice($postal_code) {
@@ -44,9 +53,10 @@ class IndexDistribution extends Component
 
     public function store()
     {
-        //update postman_id in Packages
+        //update delivery_id in Packages
         Package::findMany($this->selectedPackages)->each(function(Package $package){
-            $package->update(['postman_id' => $this->postman_id]);
+            $package->update(['delivery_id' => $this->postman_id]);
+            $this->appendMovementLog($package, 11, $this->postman_id);
         });
 
         session()->flash('status', [

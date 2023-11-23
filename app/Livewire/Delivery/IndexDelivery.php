@@ -7,10 +7,13 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Models\PostalCode;
 use App\Models\Package;
 use App\Models\User;
+use App\Traits\MovementTrait;
 use Livewire\Component;
 
 class IndexDelivery extends Component
 {
+    use MovementTrait;
+
     public $packages;
     public $postmen;
     public $postman_id;
@@ -22,17 +25,19 @@ class IndexDelivery extends Component
 
     public function searchPackages()
     {
-        $this->packages = Package::where('postman_id', $this->postman_id)->get();
+        $this->packages = Package::where('delivery_id', $this->postman_id)->get();
     }
 
     public function onClickSuccess($package)
     {
-        Package::where('tracking_number', $package)->update(['current_status' => 13]);
+        $package = Package::where('tracking_number', $package)->first();
+        $this->appendMovementLog($package, 13);
     }
 
     public function onClickFailure($package)
     {
-        Package::where('tracking_number', $package)->update(['current_status' => 14]);
+        $package = Package::where('tracking_number', $package)->first();
+        $this->appendMovementLog($package, 14);
     }
 
     public function render()
