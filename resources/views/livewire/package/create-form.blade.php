@@ -24,7 +24,7 @@
                 <div class="col-lg-3">
                     <div class="mb-3">
                         <label for="sender.from_postal_code" class="form-label">รหัสไปรษณีย์ต้นทาง</label>
-                        <select class="form-control" id="sender.from_postal_code" wire:model.defer='sender.from_postal_code'>
+                        <select class="form-control" id="sender.from_postal_code" wire:model.defer='sender.from_postal_code' @cannot('admin') disabled @endcannot>
                             @foreach ($postalCodes as $postalCode)
                                 <option value={{ $postalCode->postal_code }}>{{ $postalCode->postal_location }}</option>
                             @endforeach

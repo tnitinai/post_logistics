@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <label for="postal" class="form-label">รหัสไปรษณีย์ปัจจุบัน</label>
-                    <select class="form-control" id="postal" wire:model.defer='postal'>
+                    <select class="form-control" id="postal" wire:model.defer='postal' @cannot('admin') disabled @endcannot>
                         <option>-------------</option>
                         @foreach ($postalCodes as $postalCode)
                         <option value={{ $postalCode->postal_code }}>{{ $postalCode->postal_location }}</option>
@@ -25,12 +25,12 @@
         </div>
     </div>
 
-    @if ($postal)
+    @if ($bags)
 
 
     <div class="card mt-3">
         <div class="card-header">
-            <h5>ข้อมูลถุงไปรษณีย์</h5>
+            <h5>ข้อมูลถุงไปรษณีย์ที่รอคัดแยก</h5>
         </div>
         <div class="card-body">
             <div class="table table-responsive">

@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Vehicle;
 use Livewire\Component;
 use App\Traits\MovementTrait;
+use Illuminate\Support\Facades\Auth;
 
 class CreateTransport extends Component
 {
@@ -25,6 +26,7 @@ class CreateTransport extends Component
         $this->vehicles = [];
         $this->postalCodes = PostalCode::all();
         $this->vehicleTypes = Vehicle::VEHICLE_TYPES;
+        $this->transport['from_post_office_code'] = Auth::user()->post_office_id;
     }
 
     public function onClickNext()

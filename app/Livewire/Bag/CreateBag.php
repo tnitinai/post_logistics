@@ -5,6 +5,7 @@ namespace App\Livewire\Bag;
 use App\Models\Bag;
 use App\Models\PostalCode;
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 
 class CreateBag extends Component
 {
@@ -15,6 +16,7 @@ class CreateBag extends Component
 
     public function mount()
     {
+        $this->postal['from_postal_code'] = Auth::user()->post_office_id;
         $this->postalCodes = PostalCode::all();
         $this->bag = new Bag();
     }

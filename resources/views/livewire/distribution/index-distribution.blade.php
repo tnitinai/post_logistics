@@ -8,7 +8,7 @@
             <div class="card-body">
                 <label for="post_office" class="form-label">รหัสไปรษณีย์และบุรุษไปรษณีย์</label>
                 <div class="input-group mb-3">
-                    <select class="form-control" id="post_office" wire:model.live='post_office'>
+                    <select class="form-control" id="post_office" wire:model.live='post_office' @cannot('admin') disabled @endcannot>
                         <option>-------------</option>
                         @foreach ($postalCodes as $postalCode)
                         <option value={{ $postalCode->postal_code }}>{{ $postalCode->postal_location }}</option>

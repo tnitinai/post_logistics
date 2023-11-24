@@ -10,7 +10,7 @@
             <div class="col-lg-6">
                 <label for="transport.from_post_office_code" class="form-label">รหัสไปรษณีย์ต้นทาง</label>
                 <select class="form-control" id="transport.from_post_office_code"
-                    wire:model.defer='transport.from_post_office_code'>
+                    wire:model.defer='transport.from_post_office_code' @cannot('admin') disabled @endcannot>
                     <option>-------------</option>
                     @foreach ($postalCodes as $postalCode)
                         <option value={{ $postalCode->postal_code }}>{{ $postalCode->postal_location }}</option>

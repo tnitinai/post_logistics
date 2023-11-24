@@ -5,7 +5,8 @@
             <div class="col-lg-12">
                 <label for="post_office" class="form-label">บุรุษไปรษณีย์</label>
                 <div class="input-group mb-3">
-                    <select class="form-control" id="postman_id" wire:model.defer='postman_id'>
+                    <select class="form-control" id="postman_id" wire:model.defer='postman_id'
+                        @cannot('admin') disabled @endcannot>
                         <option>เลือกบุรุษไปรษณีย์</option>
                         @foreach ($postmen as $postman)
                             <option value={{ $postman->id }}>{{ $postman->full_name }}</option>
@@ -45,8 +46,18 @@
                                     <td>{{ $package->last_status }}</td>
                                     <td>
                                         <div class="d-flex justify-content-center">
-                                            <button wire:click="onClickSuccess('{{$package->tracking_number}}')" wire:confirm='บันทึกนำจ่ายสำเร็จ ยืนยันหรือไม่' class="btn btn-sm btn-success mr-1">สำเร็จ</button>
-                                            <button wire:click="onClickFailure('{{$package->tracking_number}}')" wire:confirm='บันทึกนำจ่ายไม่สำเร็จ ยืนยันหรือไม่' class="btn btn-sm btn-danger">ไม่สำเร็จ</button>
+                                            @if ($package->current_status === 13)
+                                                <i class="fas fa-check-circle text-success"></i>
+                                            @elseif($package->current_status === 14)
+                                                <i class="fas fa-check-circle text-danger"></i>
+                                            @else
+                                                <button wire:click="onClickSuccess('{{ $package->tracking_number }}')"
+                                                    wire:confirm='บันทึกนำจ่ายสำเร็จ ยืนยันหรือไม่'
+                                                    class="btn btn-sm btn-success mr-1">สำเร็จ</button>
+                                                <button wire:click="onClickFailure('{{ $package->tracking_number }}')"
+                                                    wire:confirm='บันทึกนำจ่ายไม่สำเร็จ ยืนยันหรือไม่'
+                                                    class="btn btn-sm btn-danger">ไม่สำเร็จ</button>
+                                            @endif
                                         </div>
                                     </td>
                                 </tr>

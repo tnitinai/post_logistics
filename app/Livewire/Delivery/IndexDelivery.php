@@ -9,6 +9,7 @@ use App\Models\Package;
 use App\Models\User;
 use App\Traits\MovementTrait;
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 
 class IndexDelivery extends Component
 {
@@ -19,7 +20,8 @@ class IndexDelivery extends Component
     public $postman_id;
 
     public function mount() {
-        $this->packages = [];
+        $this->postman_id = Auth::user()->id;
+        $this->packages = Package::where('delivery_id', $this->postman_id)->get();
         $this->postmen = User::where('role_id', 4)->get();
     }
 

@@ -33,9 +33,9 @@
                                     <td>{{ $transportation->plate_number }}</td>
                                     <td>{{ $transportation->vehicle->vehicle_type }}</td>
                                     <td>{{ $transportation->driver->fullname }}</td>
-                                    <td>{{ $transportation->sourcePostal->district }}</td>
+                                    <td>{{ $transportation->sourcePostal->postal_location }}</td>
                                     <td>{{ $transportation->start_driving }}</td>
-                                    <td>{{ $transportation->destinationPostal->district }}</td>
+                                    <td>{{ $transportation->destinationPostal->postal_location }}</td>
                                     <td>{{ $transportation->finish_driving }}</td>
                                     <td>
                                         <div class="d-flex content-justify-center">

@@ -8,6 +8,7 @@ use App\Models\Transportation;
 use Carbon\Carbon;
 use Livewire\Component;
 use App\Traits\MovementTrait;
+use Illuminate\Support\Facades\Auth;
 
 class ManageTransport extends Component
 {
@@ -18,7 +19,9 @@ class ManageTransport extends Component
 
     public function mount()
     {
-        $this->transportations = Transportation::all();
+        $this->transportations = Transportation::where('from_post_office_code', Auth::user()->post_office_id)
+            ->orWhere('to_post_office_code', Auth::user()->post_office_id)
+            ->get();
     }
 
     public function onClickDriving($transportation)

@@ -11,6 +11,7 @@ use App\Models\PostalCode;
 use App\Traits\MovementTrait;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class CreateForm extends Component
 {
@@ -26,6 +27,7 @@ class CreateForm extends Component
     {
         $this->senders = Sender::all();
         $this->postalCodes = PostalCode::all();
+        $this->sender['from_postal_code'] = Auth::user()->post_office_id;
     }
 
     public function onClickAddedItem()

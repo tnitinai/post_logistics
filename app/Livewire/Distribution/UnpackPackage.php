@@ -8,6 +8,7 @@ use App\Traits\MovementTrait;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 
 class UnpackPackage extends Component
 {
@@ -20,6 +21,8 @@ class UnpackPackage extends Component
     public function mount()
     {
         $this->postalCodes = PostalCode::all();
+        $this->bags = [];
+        $this->postal = Auth::user()->post_office_id;
     }
 
     public function onClickSearchBags() {
