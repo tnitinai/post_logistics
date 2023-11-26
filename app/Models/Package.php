@@ -22,7 +22,7 @@ class Package extends Model
     protected $keyType = 'string';
     // protected $with = ['statuses'];
     protected $fillable = [
-        'tracking_number', 'sender_id', 'from_postal_code', 'weight', 'price', 'receiver_name', 'receiver_address', 'receiver_telephone', 'to_postal_code', 'current_status','invoice_id', 'bag_id', 'delivery_id'
+        'tracking_number', 'from_postal_code', 'sender_name', 'sender_cid', 'weight', 'price', 'receiver_name', 'receiver_address', 'receiver_telephone', 'to_postal_code', 'current_status','invoice_id', 'bag_id', 'delivery_id'
     ];
 
     public function getSourcePostalNameAttribute()

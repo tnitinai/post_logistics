@@ -35,9 +35,8 @@ class CreateTransport extends Component
             $this->transport['from_post_office_code'],
             $this->transport['to_post_office_code']);
 
-        $this->drivers = User::
-        //where('name', 'พนักงานขับรถยนต์')
-            where('post_office_id', $this->transport['from_post_office_code'])
+        $this->drivers = User::where('post_office_id', $this->transport['from_post_office_code'])
+            ->where('role_id',3)
             ->get();
     }
 

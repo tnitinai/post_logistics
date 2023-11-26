@@ -9,6 +9,7 @@ use App\Livewire\Delivery\IndexDelivery;
 use App\Livewire\Distribution\IndexDistribution;
 use App\Livewire\Distribution\UnpackPackage;
 use App\Livewire\Employee\IndexEmployee;
+use App\Livewire\Tracking\SearchPackage;
 use App\Livewire\Tracking\ShowPackageInfo;
 use App\Livewire\Transport\ManageTransport;
 use App\Livewire\Vehicle\IndexVehicle;
@@ -31,10 +32,12 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::get('/find-package', [SearchPackage::class, '__invoke'])->name('find-package');
+
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/', [CreateForm::class, '__invoke'])->name('package');
+    Route::get('/', [ShowPackage::class, '__invoke'])->name('package.all');
     Route::get('/package', [CreateForm::class, '__invoke'])->name('package');
     Route::get('/package/all', [ShowPackage::class, '__invoke'])->name('package.all');
     Route::get('/receipt/{invoice_id}', [ShowReceipt::class, '__invoke'])->name('show-receipt');

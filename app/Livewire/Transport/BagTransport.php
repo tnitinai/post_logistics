@@ -11,6 +11,7 @@ use Livewire\Component;
 use Livewire\Attributes\On;
 use App\Traits\MovementTrait;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 
 class BagTransport extends Component
 {
@@ -27,7 +28,7 @@ class BagTransport extends Component
         $this->shownBagTransport = !$this->shownBagTransport;
         $this->transportation = $transportation;
         //newly created bags with no transportation
-        $this->availableBags = Bag::whereDoesntHave('transport')->get();
+        $this->availableBags = Bag::whereDoesntHave('transport')->where('from_postal_code', Auth::user()->post_office_id)->get();
         //dd($this->availableBags);
 
 
@@ -35,7 +36,7 @@ class BagTransport extends Component
         $bagsIdInDestinationPackage = Package::where('current_status', 4)->select('bag_id')->get()->toArray();
 
         // find bags which package has status 4
-        $bagsInDestinationPackage = Bag::whereIn('bag_id', $bagsIdInDestinationPackage)->get();
+        $bagsInDestinationPackage = Bag::whereIn('bag_id', $bagsIdInDestinationPackage)->where('from_postal_code', Auth::user()->post_office_id)->get();
         // dd($bagsInDestinationPackage);
         $this->availableBags = $this->availableBags->merge($bagsInDestinationPackage);
     }
@@ -61,7 +62,7 @@ class BagTransport extends Component
                     $bagBeAdded = Bag::where('bag_id', $bag_id)->first();
                     $added = $bagBeAdded->transport()->associate($tranport)->save();
                     $bagBeAdded->packages()->each(function (Package $package) use ($tranport) {
-                        $this->appendMovementLog($package, 6, $tranport->transportation_id);
+                        $this->appendMovementLog($package, 6, $tranport->transportation_id, $tranport->from_post_office_code, $tranport->to_post_office_code);
                     });
 
                     $result = $added ? true : false;
@@ -74,7 +75,7 @@ class BagTransport extends Component
                     $bagBeAdded = Bag::where('bag_id', $bag_id)->first();
                     $added = $bagBeAdded->transport()->associate($tranport)->save();
                     $bagBeAdded->packages()->each(function (Package $package) use ($tranport) {
-                        $this->appendMovementLog($package, 8, $tranport->transportation_id);
+                        $this->appendMovementLog($package, 8, $tranport->transportation_id, $tranport->from_post_office_code, $tranport->to_post_office_code);
                     });
 
                     $result = $added ? true : false;
@@ -88,7 +89,7 @@ class BagTransport extends Component
                     $bagBeAdded = Bag::where('bag_id', $bag_id)->first();
                     $added = $bagBeAdded->transport()->associate($tranport)->save();
                     $bagBeAdded->packages()->each(function (Package $package) use ($tranport) {
-                        $this->appendMovementLog($package, 3, $tranport->transportation_id);
+                        $this->appendMovementLog($package, 3, $tranport->transportation_id, $tranport->from_post_office_code, $tranport->to_post_office_code);
                     });
 
                     $result = $added ? true : false;

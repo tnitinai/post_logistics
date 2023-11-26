@@ -25,15 +25,15 @@ class IndexDistribution extends Component
     public $post_office;
     public $postman_id;
     public $selectedPackages = [];
-    
+
     public function mount()
     {
         $this->postalCodes = PostalCode::all();
         $this->post_office = Auth::user()->post_office_id;
-        
+
         // packages ที่มีปลายทางเดียวกับต้นทางและตรงกับที่ทำการของ user AND current_status in 1,9
         $this->packages = Package::where('to_postal_code', $this->post_office)->whereIn('current_status', [1, 9])->get();
-        
+
         $this->postmen = User::where('post_office_id', $this->post_office)->where('role_id', 4)->get();;
         /*
         // bags ที่มีสถานะ ถึงที่ทำการปลายทาง
@@ -58,7 +58,7 @@ class IndexDistribution extends Component
         //update delivery_id in Packages
         Package::findMany($this->selectedPackages)->each(function(Package $package){
             $package->update(['delivery_id' => $this->postman_id]);
-            $this->appendMovementLog($package, 11, $this->postman_id);
+            $this->appendMovementLog($package, 11, $this->postman_id, null,$package->to_postal_code,$package->to_postal_code );
         });
 
         session()->flash('status', [

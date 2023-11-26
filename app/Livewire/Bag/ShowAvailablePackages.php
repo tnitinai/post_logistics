@@ -62,9 +62,9 @@ class ShowAvailablePackages extends Component
 
                 //ถ้า package มาจากการเปิดถุง ให้อัพเดท status = 15
                 if($package->current_status == 5) {
-                    $this->appendMovementLog($package, 15, $bag->bag_id);
+                    $this->appendMovementLog($package, 15, $bag->bag_id, $this->source, $this->destination);
                 }else {
-                    $this->appendMovementLog($package, 2, $bag->bag_id);
+                    $this->appendMovementLog($package, 2, $bag->bag_id, $this->source, $this->destination);
                 }
             }
         });

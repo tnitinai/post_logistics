@@ -54,9 +54,9 @@
                                                 <button wire:click="onClickSuccess('{{ $package->tracking_number }}')"
                                                     wire:confirm='บันทึกนำจ่ายสำเร็จ ยืนยันหรือไม่'
                                                     class="btn btn-sm btn-success mr-1">สำเร็จ</button>
-                                                <button wire:click="onClickFailure('{{ $package->tracking_number }}')"
+                                                {{-- <button wire:click="onClickFailure('{{ $package->tracking_number }}')"
                                                     wire:confirm='บันทึกนำจ่ายไม่สำเร็จ ยืนยันหรือไม่'
-                                                    class="btn btn-sm btn-danger">ไม่สำเร็จ</button>
+                                                    class="btn btn-sm btn-danger">ไม่สำเร็จ</button> --}}
                                             @endif
                                         </div>
                                     </td>

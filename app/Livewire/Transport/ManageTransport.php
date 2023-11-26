@@ -4,6 +4,7 @@ namespace App\Livewire\Transport;
 
 use App\Models\Bag;
 use App\Models\Package;
+use App\Models\PostalCode;
 use App\Models\Transportation;
 use Carbon\Carbon;
 use Livewire\Component;
@@ -15,6 +16,13 @@ class ManageTransport extends Component
     use MovementTrait;
 
     public $transportations;
+    public $postalCodes;
+    public $query = [
+        'from_postal_code' => null,
+        'to_postal_code' => null,
+        'date' => null,
+    ];
+
     public $shownNewTransportation = false;
 
     public function mount()
@@ -22,6 +30,7 @@ class ManageTransport extends Component
         $this->transportations = Transportation::where('from_post_office_code', Auth::user()->post_office_id)
             ->orWhere('to_post_office_code', Auth::user()->post_office_id)
             ->get();
+        $this->postalCodes = PostalCode::all();
     }
 
     public function onClickDriving($transportation)
@@ -41,7 +50,7 @@ class ManageTransport extends Component
         $packagesIntransit = $this->checkPackagesIntransit($trans, 3);
         if ($packagesIntransit) {
             $trans->update(['finish_driving' => Carbon::now()]);
-            $this->recordMovementWhenReachDestination($trans, 4);
+            $this->recordMovementWhenReachDestination($trans, 4, $trans->from_postal_office_code, $trans->to_postal_office_code);
             session()->flash('status', [
                 'type' => 'success',
                 'message' => 'บันทึกข้อมูลการขนส่งยานพาหนะถึงศูนย์ไปรษณีย์ต้นทางสำเร็จ'
@@ -53,7 +62,7 @@ class ManageTransport extends Component
         $packagesIntransit = $this->checkPackagesIntransit($trans, 6);
         if ($packagesIntransit) {
             $trans->update(['finish_driving' => Carbon::now()]);
-            $this->recordMovementWhenReachDestination($trans, 7);
+            $this->recordMovementWhenReachDestination($trans, 7, $trans->from_postal_office_code, $trans->to_postal_office_code);
             session()->flash('status', [
                 'type' => 'success',
                 'message' => 'บันทึกข้อมูลการขนส่งยานพาหนะถึงศูนย์ไปรษณีย์ปลายทางสำเร็จ'
@@ -65,7 +74,7 @@ class ManageTransport extends Component
         $packagesIntransit = $this->checkPackagesIntransit($trans, 8);
         if ($packagesIntransit) {
             $trans->update(['finish_driving' => Carbon::now()]);
-            $this->recordMovementWhenReachDestination($trans, 9);
+            $this->recordMovementWhenReachDestination($trans, 9, $trans->from_postal_office_code, $trans->to_postal_office_code);
             session()->flash('status', [
                 'type' => 'success',
                 'message' => 'บันทึกข้อมูลการขนส่งยานพาหนะถึงที่ทำการปลายทางสำเร็จ'
@@ -78,6 +87,24 @@ class ManageTransport extends Component
             'message' => 'ไม่มีข้อมูลเปลี่ยนแปลง'
         ]);
         $this->redirect('transportation');
+    }
+
+    public function onClickSearchTransportations()
+    {
+        $from = $this->query['from_postal_code'] ?? null;
+        $to = $this->query['to_postal_code'] ?? null;
+        $date = $this->query['date'] ?? null;
+
+        $this->transportations = Transportation::when($from, function($q, $from) {
+                return $q->where('from_postal_office_code', $from);
+
+            })->when($to, function($q, $to) {
+                return $q->where('to_postal_office_code', $to);
+
+            })->when($date, function($q, $date) {
+                return $q->whereDate('created_at', $date);
+
+            })->get();
     }
 
     public function render()

@@ -42,7 +42,7 @@ class UnpackPackage extends Component
     {
         //update status to คัดแยกและบรรจุถุง
         DB::transaction(function() use ($bag){
-            $this->recordUppackingBag($bag, 5);
+            $this->recordUppackingBag($bag, 5, null, $bag->from_postal_code, $bag->to_postal_code);
         });
         session()->flash('status', [
             'type' => 'success',

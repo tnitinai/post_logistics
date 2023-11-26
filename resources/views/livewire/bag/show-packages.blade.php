@@ -15,11 +15,11 @@
                 </thead>
                 <tbody>
                     @foreach ($packages as $package)
-                        <tr>
-                            <td>{{$loop->iteration}}</td>
-                            <td>{{$package->tracking_number}}</td>
-                            <td>{{$package->destinationPostalCode->postal_location}}</td>
-                        </tr>
+                    <tr>
+                        <td>{{$loop->iteration}}</td>
+                        <td>{{$package->tracking_number}}</td>
+                        <td>{{$package->destinationPostalCode->postal_location}}</td>
+                    </tr>
                     @endforeach
                 </tbody>
             </table>

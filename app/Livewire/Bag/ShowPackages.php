@@ -3,6 +3,7 @@
 namespace App\Livewire\Bag;
 
 use App\Models\Bag;
+use App\Models\PostalCode;
 use Livewire\Component;
 use Livewire\Attributes\On;
 
@@ -18,6 +19,8 @@ class ShowPackages extends Component
         $this->bagTag = $bag->bag_id;
         $this->packages = $bag->packages;
     }
+
+    //public function onRemovePackage
 
     public function render()
     {

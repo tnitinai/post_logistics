@@ -47,28 +47,28 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item {{ Nav::isRoute('package') }}">
+            {{-- <li class="nav-item {{ Nav::isRoute('package') }}">
                 <a class="nav-link" href="{{ route('package') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>{{ __('Dashboard') }}</span></a>
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <hr class="sidebar-divider"> --}}
 
             <!-- Heading -->
             {{-- <div class="sidebar-heading">
-            {{ __('Settings') }}
-        </div> --}}
+                {{ __('Settings') }}
+            </div> --}}
 
             <!-- Nav Item - Package Registration -->
             @can('registrator')
-                <li class="nav-item {{ Nav::isRoute('package') }}">
-                    <a class="nav-link" href={{ route('package') }} wire:navigate>
-                        <i class="fas fa-box"></i>
-                        <span>{{ __('รับพัสดุ') }}</span>
-                    </a>
-                </li>
+            <li class="nav-item {{ Nav::isRoute('package') }}">
+                <a class="nav-link" href={{ route('package') }} wire:navigate>
+                    <i class="fas fa-box"></i>
+                    <span>{{ __('รับพัสดุ') }}</span>
+                </a>
+            </li>
             @endcan
 
             <!-- Nav Item - Package Display -->
@@ -81,81 +81,81 @@
 
             <!-- Nav Item - Create Bag -->
             @can('distributor')
-                <li class="nav-item {{ Nav::isRoute('show-bag') }}">
-                    <a class="nav-link" href={{ route('show-bag') }} wire:navigate>
-                        <i class="fas fa-archive"></i>
-                        <span>{{ __('สร้างถุงไปรษณีย์') }}</span>
-                    </a>
-                </li>
-            @endcan
-
-            <!-- Nav Item - Bag Management -->
-            @can('distributor')
-                <li class="nav-item {{ Nav::isRoute('manage-bag') }}">
-                    <a class="nav-link" href={{ route('manage-bag') }} wire:navigate>
-                        <i class="fas fa-edit"></i>
-                        <span>{{ __('จัดการถุงไปรษณีย์') }}</span>
-                    </a>
-                </li>
-            @endcan
-
-            <!-- Nav Item - Vehicle Management -->
-            @can('driver')
-                <li class="nav-item {{ Nav::isRoute('manage-vehicle') }}">
-                    <a class="nav-link" href={{ route('manage-vehicle') }} wire:navigate>
-                        <i class="fas fa-shuttle-van"></i>
-                        <span>{{ __('จัดการยานพาหนะ') }}</span>
-                    </a>
-                </li>
-            @endcan
-
-            <!-- Nav Item - Transport Management -->
-            @can('driver')
-                <li class="nav-item {{ Nav::isRoute('manage-transport') }}">
-                    <a class="nav-link" href={{ route('manage-transport') }} wire:navigate>
-                        <i class="fas fa-truck"></i>
-                        <span>{{ __('จัดการการขนส่ง') }}</span>
-                    </a>
-                </li>
+            <li class="nav-item {{ Nav::isRoute('show-bag') }}">
+                <a class="nav-link" href={{ route('show-bag') }} wire:navigate>
+                    <i class="fas fa-archive"></i>
+                    <span>{{ __('สร้างถุงไปรษณีย์') }}</span>
+                </a>
+            </li>
             @endcan
 
             <!-- Nav Item - Unpackaing Management -->
             @can('distributor')
-                <li class="nav-item {{ Nav::isRoute('unpack-package') }}">
-                    <a class="nav-link" href={{ route('unpack-package') }} wire:navigate>
-                        <i class="fas fa-dolly"></i>
-                        <span>{{ __('คัดแยกถุงไปรษณีย์') }}</span>
-                    </a>
-                </li>
+            <li class="nav-item {{ Nav::isRoute('unpack-package') }}">
+                <a class="nav-link" href={{ route('unpack-package') }} wire:navigate>
+                    <i class="fas fa-dolly"></i>
+                    <span>{{ __('เปิดถุงไปรษณีย์') }}</span>
+                </a>
+            </li>
+            @endcan
+
+            <!-- Nav Item - Bag Management -->
+            @can('distributor')
+            <li class="nav-item {{ Nav::isRoute('manage-bag') }}">
+                <a class="nav-link" href={{ route('manage-bag') }} wire:navigate>
+                    <i class="fas fa-edit"></i>
+                    <span>{{ __('ข้อมูลถุงไปรษณีย์') }}</span>
+                </a>
+            </li>
+            @endcan
+
+            <!-- Nav Item - Vehicle Management -->
+            {{-- @can('driver')
+            <li class="nav-item {{ Nav::isRoute('manage-vehicle') }}">
+                <a class="nav-link" href={{ route('manage-vehicle') }} wire:navigate>
+                    <i class="fas fa-shuttle-van"></i>
+                    <span>{{ __('จัดการยานพาหนะ') }}</span>
+                </a>
+            </li>
+            @endcan --}}
+
+            <!-- Nav Item - Transport Management -->
+            @can('driver')
+            <li class="nav-item {{ Nav::isRoute('manage-transport') }}">
+                <a class="nav-link" href={{ route('manage-transport') }} wire:navigate>
+                    <i class="fas fa-truck"></i>
+                    <span>{{ __('จัดการการขนส่ง') }}</span>
+                </a>
+            </li>
             @endcan
 
             <!-- Nav Item - Distribution Management -->
             @can('postman')
-                <li class="nav-item {{ Nav::isRoute('manage-distribution') }}">
-                    <a class="nav-link" href={{ route('manage-distribution') }} wire:navigate>
-                        <i class="fas fa-boxes"></i>
-                        <span>{{ __('เตรียมนำจ่ายพัสดุ') }}</span>
-                    </a>
-                </li>
+            <li class="nav-item {{ Nav::isRoute('manage-distribution') }}">
+                <a class="nav-link" href={{ route('manage-distribution') }} wire:navigate>
+                    <i class="fas fa-boxes"></i>
+                    <span>{{ __('เตรียมนำจ่ายพัสดุ') }}</span>
+                </a>
+            </li>
             @endcan
 
             <!-- Nav Item - Delivery Management -->
             @can('postman')
-                <li class="nav-item {{ Nav::isRoute('manage-delivery') }}">
-                    <a class="nav-link" href={{ route('manage-delivery') }} wire:navigate>
-                        <i class="fas fa-motorcycle"></i>
-                        <span>{{ __('บันทึกการนำจ่าย') }}</span>
-                    </a>
-                </li>
+            <li class="nav-item {{ Nav::isRoute('manage-delivery') }}">
+                <a class="nav-link" href={{ route('manage-delivery') }} wire:navigate>
+                    <i class="fas fa-motorcycle"></i>
+                    <span>{{ __('บันทึกการนำจ่าย') }}</span>
+                </a>
+            </li>
             @endcan
 
             <!-- Nav Item - Employee Management -->
-            <li class="nav-item {{ Nav::isRoute('manage-employee') }}">
+            {{-- <li class="nav-item {{ Nav::isRoute('manage-employee') }}">
                 <a class="nav-link" href={{ route('manage-employee') }} wire:navigate>
                     <i class="fas fa-user"></i>
                     <span>{{ __('จัดการพนักงาน') }}</span>
                 </a>
-            </li>
+            </li> --}}
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -221,32 +221,22 @@
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline small">{{ Auth::user()->fname }}</span>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->fname }} <span class="caret"></span>
                             </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                {{-- <a class="dropdown-item" href="{{ route('profile') }}">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    {{ __('Profile') }}
-                                </a> --}}
-                                <a class="dropdown-item" href="javascript:void(0)">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    {{ __('Settings') }}
-                                </a>
-                                <a class="dropdown-item" href="javascript:void(0)">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    {{ __('Activity Log') }}
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal"
-                                    data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
+                                    @csrf
+                                </form>
                             </div>
                         </li>
 
@@ -258,9 +248,9 @@
                 <!-- Begin Page Content -->
                 <div class="container">
                     @if (session('status'))
-                        <div class="alert alert-{{ session('status.type') }}">
-                            {{ session('status.message') }}
-                        </div>
+                    <div class="alert alert-{{ session('status.type') }}">
+                        {{ session('status.message') }}
+                    </div>
                     @endif
                     {{ $slot }}
 
@@ -270,15 +260,16 @@
             </div>
             <!-- End of Main Content -->
 
-            {{-- <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Alejandro RH {{ now()->year }}</span>
+            {{--
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Alejandro RH {{ now()->year }}</span>
+                    </div>
                 </div>
-            </div>
-        </footer>
-        <!-- End of Footer --> --}}
+            </footer>
+            <!-- End of Footer --> --}}
 
             @livewireScripts
         </div>
@@ -306,7 +297,8 @@
                 <div class="modal-footer">
                     <button class="btn btn-link" type="button" data-dismiss="modal">{{ __('Cancel') }}</button>
                     <a class="btn btn-danger" href="{{ route('logout') }}"
-                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{
+                        __('Logout') }}</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>

@@ -33,17 +33,18 @@ class IndexDelivery extends Component
     public function onClickSuccess($package)
     {
         $package = Package::where('tracking_number', $package)->first();
-        $this->appendMovementLog($package, 13);
+        $this->appendMovementLog($package, 13, null,Auth::user()->post_office_id,Auth::user()->post_office_id);
     }
 
     public function onClickFailure($package)
     {
         $package = Package::where('tracking_number', $package)->first();
-        $this->appendMovementLog($package, 14);
+        $this->appendMovementLog($package, 14, null,Auth::user()->post_office_id,Auth::user()->post_office_id);
     }
 
     public function render()
     {
+        $this->packages = Package::where('delivery_id', $this->postman_id)->get();
         return view('livewire.delivery.index-delivery');
     }
 }

@@ -29,7 +29,6 @@
                         <tr>
                             <th>#</th>
                             <th>เลือก</th>
-                            <th>หมายเลขถุง</th>
                             <th>หมายเลขพัสดุ</th>
                             <th>ชื่อผู้รับ</th>
                             <th>ที่อยู่</th>
@@ -46,8 +45,7 @@
                                     <input class="form-check-input" type="checkbox" wire:model.live="selectedPackages"
                                         id="selectedPackages" value={{ $package->tracking_number }}>
                                 </div>
-                            </td>
-                            <td>{{ $package->bag_id }}</td>
+                            </td>ß
                             <td>{{ $package->tracking_number }}</td>
                             <td>{{ $package->receiver_name }}</td>
                             <td>{{ $package->receiver_address }}</td>

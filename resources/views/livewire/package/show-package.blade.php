@@ -11,7 +11,7 @@
                     <select class="form-control" id="query.from_postal_code" wire:model.defer='query.from_postal_code'>
                         <option>-------------</option>
                         @foreach ($postalCodes as $postalCode)
-                            <option value={{ $postalCode->postal_code }}>{{ $postalCode->postal_location }}</option>
+                        <option value={{ $postalCode->postal_code }}>{{ $postalCode->postal_location }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -20,7 +20,7 @@
                     <select class="form-control" id="query.to_postal_code" wire:model.defer='query.to_postal_code'>
                         <option>-------------</option>
                         @foreach ($postalCodes as $postalCode)
-                            <option value={{ $postalCode->postal_code }}>{{ $postalCode->postal_location }}</option>
+                        <option value={{ $postalCode->postal_code }}>{{ $postalCode->postal_location }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -45,6 +45,7 @@
                         <tr>
                             <th>วันที่เข้าระบบ</th>
                             <th>Tracking</th>
+                            <th>ใบเสร็จรับเงิน</th>
                             <th>ต้นทาง</th>
                             <th>ปลายทาง</th>
                             <th>Bag</th>
@@ -54,29 +55,32 @@
                     </thead>
                     <tbody>
                         @foreach ($packages as $package)
-                            <tr style="white-space: nowrap;">
-                                <td>{{ $package->invoice->created_at }}</td>
-                                <td>{{ $package->tracking_number }}</td>
-                                <td>{{ $package->sourcePostalCode->postal_location }}</td>
-                                <td>{{ $package->destinationPostalCode->postal_location }}</td>
-                                <td>{{ $package->bag_id }}</td>
-                                <td>{{ $package->bag ? $package->bag->transport_id : null }}</td>
-                                <td>{{ $package->last_status }}</td>
-                            </tr>
+                        <tr style="white-space: nowrap;">
+                            <td>{{ $package->invoice->created_at }}</td>
+                            <td><a href={{route('show-tracking', $package->tracking_number)}} target="_blank">
+                                    {{ $package->tracking_number }}</a></td>
+                            <td><a href={{route('show-receipt', $package->invoice->invoice_id)}} target="_blank">
+                                    {{ $package->invoice->invoice_id }}</a></td>
+                            <td>{{ $package->sourcePostalCode->postal_location }}</td>
+                            <td>{{ $package->destinationPostalCode->postal_location }}</td>
+                            <td>{{ $package->bag_id }}</td>
+                            <td>{{ $package->bag ? $package->bag->transport_id : null }}</td>
+                            <td>{{ $package->last_status }}</td>
+                        </tr>
                         @endforeach
                         {{-- @foreach ($transportations as $trans)
-                            @foreach ($trans->bags as $bag)
-                                @foreach ($bag->packages as $package)
-                                    <tr>
-                                        <td>{{ $package->tracking_number }}</td>
-                                        <td>{{ $package->sourcePostalCode->district }}</td>
-                                        <td>{{ $package->destinationPostalCode->district }}</td>
-                                        <td>{{ $trans->transportation_id }}</td>
-                                        <td>{{ $bag->bag_id }}</td>
-                                        <td>{{ $package->last_status }}</td>
-                                    </tr>
-                                @endforeach
-                            @endforeach
+                        @foreach ($trans->bags as $bag)
+                        @foreach ($bag->packages as $package)
+                        <tr>
+                            <td>{{ $package->tracking_number }}</td>
+                            <td>{{ $package->sourcePostalCode->district }}</td>
+                            <td>{{ $package->destinationPostalCode->district }}</td>
+                            <td>{{ $trans->transportation_id }}</td>
+                            <td>{{ $bag->bag_id }}</td>
+                            <td>{{ $package->last_status }}</td>
+                        </tr>
+                        @endforeach
+                        @endforeach
                         @endforeach --}}
                     </tbody>
                 </table>
